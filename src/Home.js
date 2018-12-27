@@ -6,7 +6,7 @@ class Home extends Component {
       <div>
         <div classname="CompanyName">
           <h2>ABC Company</h2>
-          <h2>Welcome John Smith, Manager</h2>
+          <h3>Welcome John Smith, Manager</h3>
         </div>
         <div className="NavButtons">
           <button>EMPLOYEES</button>
