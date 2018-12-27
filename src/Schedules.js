@@ -7,6 +7,9 @@ class Schedules extends Component {
         <div classname="CompanyName">
           <h2>ABC Company</h2>
           <h2>Scheduler</h2>
+          <div className="DeleteTabs">
+            <a href="#">CLEAR/DELETE</a>
+          </div>
         </div>
       </div>
     )

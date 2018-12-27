@@ -49,15 +49,12 @@ code {
   margin-top: 8vh;
   width: 40vw;
   cursor: pointer;
-  /* background-color: rgb(247, 126, 56); */
   border-color: rgba(0, 0, 0, 0.753);
-  /* color: whitesmoke; */
   background-image: linear-gradient(rgb(247, 126, 56), rgb(170, 165, 165));
 }
 .AddEditTabs a {
   color: whitesmoke;
   text-decoration: none;
-  /* padding: 9vw; */
   cursor: pointer;
 }
 .AddEditTabs {
@@ -67,4 +64,17 @@ code {
   justify-content: space-evenly;
   align-items: center;
   padding: 1vh;
+}
+.DeleteTabs {
+  background-color: rgb(26, 26, 250);
+  color: whitesmoke;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1vh;
+}
+.DeleteTabs a {
+  color: whitesmoke;
+  text-decoration: none;
+  cursor: pointer;
 }
