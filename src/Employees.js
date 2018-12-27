@@ -12,8 +12,8 @@ class Employees extends Component {
           <a href="#">ADD/EDIT POSITIONS</a>
           <a href="#">ADD NEW EMPLOYEE</a>
         </div>
-        <div className="EmployeeTable">
-          <table className="EmployeeCells">
+        <div className="EmployeeContainer">
+          <table className="EmployeeTable">
             <tbody>
               <tr>
                 <th>FIRST</th>
@@ -22,14 +22,14 @@ class Employees extends Component {
                 <th>EMAIL</th>
               </tr>
               <tr>
-                <td>Jill</td>
+                <td>John</td>
                 <td>Smith</td>
                 <td>727-111-2222</td>
                 <td>abc@zzz.com</td>
               </tr>
               <tr>
-                <td>Eve</td>
-                <td>Jackson</td>
+                <td>Anna</td>
+                <td>Banana</td>
                 <td>727-333-4444</td>
                 <td>abc@zzz.com</td>
               </tr>

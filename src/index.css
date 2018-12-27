@@ -74,24 +74,20 @@ h3 {
   align-items: center;
   padding: 1vh;
 }
-/* .EmployeeCells {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-} */
-.EmployeeTable,
-th,
-td,
-tr {
+
+.EmployeeContainer {
   border: 1px solid black;
   border-spacing: none;
-  margin: 0;
 }
-table {
+table,
+tr,
+td,
+th {
   border-collapse: collapse;
   border-spacing: none;
+  border: 1px solid black;
 }
-.EmployeeCells {
+.EmployeeTable {
   width: 100%;
 }
 .DeleteTabs {
