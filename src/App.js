@@ -18,8 +18,8 @@ class App extends Component {
           <a href="#">SCHEDULES</a>
         </div>
         {/* <Home /> */}
-        {/* <Employees /> */}
-        <Schedules />
+        <Employees />
+        {/* <Schedules /> */}
       </div>
     )
   }

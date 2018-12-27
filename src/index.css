@@ -34,6 +34,15 @@ code {
   text-align: center;
   cursor: pointer;
 }
+/* .CompanyName {
+  background-color: red;
+} */
+h2 {
+  margin: 1vh;
+}
+h3 {
+  margin: 1vh;
+}
 .NavButtons {
   display: flex;
   justify-content: center;

@@ -6,7 +6,7 @@ class Employees extends Component {
       <div>
         <div className="CompanyName">
           <h2>ABC Company</h2>
-          <h2>Employee List</h2>
+          <h3>Employee List</h3>
         </div>
         <div className="AddEditTabs">
           <a href="#">ADD/EDIT POSITIONS</a>

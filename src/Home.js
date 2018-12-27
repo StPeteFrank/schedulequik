@@ -9,7 +9,7 @@ class Home extends Component {
           <h2>Welcome John Smith, Manager</h2>
         </div>
         <div className="NavButtons">
-          <button>EMPLOYESS</button>
+          <button>EMPLOYEES</button>
           <button>SCHEDULES</button>
         </div>
       </div>
