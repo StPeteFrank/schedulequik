@@ -31,7 +31,13 @@ class Employees extends Component {
                 <td>Anna</td>
                 <td>Banana</td>
                 <td>727-333-4444</td>
-                <td>abc@zzz.com</td>
+                <td>def@zzz.com</td>
+              </tr>
+              <tr>
+                <td>Jennifer</td>
+                <td>Zayne</td>
+                <td>727-555-6666</td>
+                <td>ghi@zzz.com</td>
               </tr>
             </tbody>
           </table>
