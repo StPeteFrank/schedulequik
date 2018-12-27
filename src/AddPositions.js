@@ -6,8 +6,26 @@ class AddPositions extends Component {
       <div>
         <h2>Add Positions</h2>
         <div className="AddPositionContainer">
-          <p>New Positions</p> <button>Add</button>
-          <p>Positions</p> <button>Edit/Delete</button>
+          <section>
+            <div className="AddButton">
+              <p>New Positions</p> <button>Add</button>
+            </div>
+
+            <div>
+              <input type="text" placeholder="Enter Position" />
+            </div>
+          </section>
+          <section className="PositionsList">
+            <div className="EditDeleteButton">
+              <p>Positions</p> <button>Edit/Delete</button>
+            </div>
+            <ul>
+              <li>Manager</li>
+              <li>Junior Developer</li>
+              <li>Developer</li>
+              <li>Senior Developer</li>
+            </ul>
+          </section>
         </div>
       </div>
     )
