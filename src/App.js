@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import logo from './logo.svg'
 import './App.css'
+import Home from './Home'
+import Employees from './Employees'
+import Schedules from './Schedules'
 
 class App extends Component {
   render() {
@@ -10,14 +13,13 @@ class App extends Component {
           <h1>ScheduleQuik</h1>
         </div>
         <div className="Tabs">
-          <a href="#">Home</a>
-          <a href="#">Employees</a>
-          <a href="#">Schedules</a>
+          <a href="#">HOME</a>
+          <a href="#">EMPLOYEES</a>
+          <a href="#">SCHEDULES</a>
         </div>
-        <div className="NavButtons">
-          <button>Employees</button>
-          <button>Schedules</button>
-        </div>
+        {/* <Home /> */}
+        <Employees />
+        {/* <Schedules /> */}
       </div>
     )
   }

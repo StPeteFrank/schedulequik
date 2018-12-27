@@ -6,6 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-color: rgb(214, 208, 208); */
 }
 
 code {
@@ -13,19 +14,24 @@ code {
     monospace;
 }
 .Header {
-  background-color: rgb(255, 94, 0);
+  background-color: rgb(247, 126, 56);
   padding: 2vh;
   color: whitesmoke;
 }
 .Tabs {
-  background-color: blue;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(26, 26, 250);
   color: whitesmoke;
   padding: 1vh;
 }
 .Tabs a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: whitesmoke;
   text-decoration: none;
-  padding: 8vw;
+  text-align: center;
   cursor: pointer;
 }
 .NavButtons {
@@ -33,16 +39,32 @@ code {
   justify-content: center;
   flex-direction: column;
   margin: auto;
-  /* margin-top: 10vh; */
   color: grey;
-  width: 20vw;
+  align-items: center;
 }
 .NavButtons button {
-  /* display: flex; */
-  padding: 1rem;
-  margin-top: 10vh;
+  display: flex;
+  justify-content: left;
+  padding: 0.5rem;
+  margin-top: 8vh;
+  width: 40vw;
   cursor: pointer;
-  /* color: whitesmoke; */
-  background-color: rgb(153, 147, 147);
+  /* background-color: rgb(247, 126, 56); */
   border-color: rgba(0, 0, 0, 0.753);
+  /* color: whitesmoke; */
+  background-image: linear-gradient(rgb(247, 126, 56), rgb(170, 165, 165));
+}
+.AddEditTabs a {
+  color: whitesmoke;
+  text-decoration: none;
+  /* padding: 9vw; */
+  cursor: pointer;
+}
+.AddEditTabs {
+  background-color: rgb(26, 26, 250);
+  color: whitesmoke;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1vh;
 }
