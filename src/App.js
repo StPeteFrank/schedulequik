@@ -15,7 +15,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <Home /> */}
+        <div className="Header">
+          <h1>ScheduleQuik</h1>
+        </div>
+        <div className="Tabs">
+          <a href="#">HOME</a>
+          <a href="#">EMPLOYEES</a>
+          <a href="#">SCHEDULES</a>
+        </div>
+        <div />
+        <Home />
         {/* <Employees /> */}
         {/* <Schedules /> */}
         {/* <AddPositions /> */}
@@ -23,7 +32,7 @@ class App extends Component {
         {/* <DeletePositions /> */}
         {/* <AddNewEmployees /> */}
         {/* <QuikShiftAdd /> */}
-        <QuikShiftEdit />
+        {/* <QuikShiftEdit /> */}
       </div>
     )
   }
