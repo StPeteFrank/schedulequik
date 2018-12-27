@@ -1,14 +1,48 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.Header {
+  background-color: rgb(255, 94, 0);
+  padding: 2vh;
+  color: whitesmoke;
+}
+.Tabs {
+  background-color: blue;
+  color: whitesmoke;
+  padding: 1vh;
+}
+.Tabs a {
+  color: whitesmoke;
+  text-decoration: none;
+  padding: 8vw;
+  cursor: pointer;
+}
+.NavButtons {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  /* margin-top: 10vh; */
+  color: grey;
+  width: 20vw;
+}
+.NavButtons button {
+  /* display: flex; */
+  padding: 1rem;
+  margin-top: 10vh;
+  cursor: pointer;
+  /* color: whitesmoke; */
+  background-color: rgb(153, 147, 147);
+  border-color: rgba(0, 0, 0, 0.753);
 }
