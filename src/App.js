@@ -24,10 +24,10 @@ class App extends Component {
           <a href="#">SCHEDULES</a>
         </div>
         <div />
-        <Home />
+        {/* <Home /> */}
         {/* <Employees /> */}
         {/* <Schedules /> */}
-        {/* <AddPositions /> */}
+        <AddPositions />
         {/* <EditPositions /> */}
         {/* <DeletePositions /> */}
         {/* <AddNewEmployees /> */}

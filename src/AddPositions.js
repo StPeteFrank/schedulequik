@@ -5,6 +5,10 @@ class AddPositions extends Component {
     return (
       <div>
         <h2>Add Positions</h2>
+        <div className="AddPositionContainer">
+          <p>New Positions</p> <button>Add</button>
+          <p>Positions</p> <button>Edit/Delete</button>
+        </div>
       </div>
     )
   }
