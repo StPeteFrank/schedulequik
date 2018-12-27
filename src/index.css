@@ -34,9 +34,6 @@ code {
   text-align: center;
   cursor: pointer;
 }
-/* .CompanyName {
-  background-color: red;
-} */
 h2 {
   margin: 1vh;
 }
@@ -109,4 +106,7 @@ th {
 .ScheduleContainer {
   border: 1px solid black;
   border-spacing: none;
+}
+td {
+  cursor: pointer;
 }
