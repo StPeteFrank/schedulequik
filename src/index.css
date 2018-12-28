@@ -169,5 +169,25 @@ button {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 7vh;
+  margin-top: 6vh;
+}
+.DeletePositionContainer {
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(173, 169, 169);
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+.DeletePositionContainer button {
+  border-radius: 4px;
+  margin: 1vw;
+  background-color: rgb(247, 126, 56);
+}
+.DeletePositionsButtons {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 6vh;
 }

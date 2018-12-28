@@ -21,7 +21,7 @@ class EditPositions extends Component {
             <button>Save</button>
             <button>Delete</button>
             {/* Delete button takes you to DeletePosition view.
-            Save button takes you to AddPosition view. */}
+            Save button takes you back to AddPosition view. */}
           </section>
         </div>
       </div>
