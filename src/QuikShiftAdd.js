@@ -8,17 +8,21 @@ class QuikShiftAdd extends Component {
         <div className="QuikShiftAddContainer">
           <section>
             <p>John Smith</p>
-            <div className="CurrentPositions">
-              <input type="text" placeholder="Office Manager" />
-              <input type="text" placeholder="Junior Developer" />
-              <input type="text" placeholder="Developer" />
-              <input type="text" placeholder="CTO" />
+            <div className="SelectAPosition">
+              <option value="">Select a Position</option>
+              <select onChange="Select a Position" />
             </div>
-          </section>
+            <div className="StartEndTimeInput">
+              <p>Start</p>
+              <input type="text" placeholder="In Time" />
+              <p>Finish</p>
+              <input type="text" placeholder="Out Time" />
+            </div>
 
-          <section className="QuikShiftAddButtons">
-            <button>Add Shift</button>
-            <button>Cancel</button>
+            <div className="QuikShiftAddButtons">
+              <button>Add Shift</button>
+              <button>Cancel</button>
+            </div>
           </section>
         </div>
       </div>

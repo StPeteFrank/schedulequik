@@ -261,3 +261,10 @@ button {
   flex-direction: column;
   margin: 6vh;
 }
+.StartEndTimeInput {
+  display: flex;
+  list-style: none;
+  justify-content: left;
+  flex-direction: column;
+  margin-bottom: 1vh;
+}
