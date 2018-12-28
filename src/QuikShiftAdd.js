@@ -8,6 +8,7 @@ class QuikShiftAdd extends Component {
         <div className="QuikShiftAddContainer">
           <section>
             <p>John Smith</p>
+            {/* "John Smith" needs to come from EmployeesTable db (HttpGet). */}
             <div className="SelectAPosition">
               <option value="">Select a Position</option>
               <select onChange="Select a Position" />

@@ -254,19 +254,30 @@ button {
   margin: 1vw;
   background-color: rgb(247, 126, 56);
   width: 20vw;
+  height: 4vh;
 }
 .QuikShiftAddButtons {
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  justify-content: left;
+  flex-direction: row;
   margin: 6vh;
+}
+.SelectAPosition {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.SelectAPosition select {
+  cursor: pointer;
 }
 .StartEndTimeInput {
   display: flex;
-  list-style: none;
-  justify-content: left;
+  /* list-style: none; */
+  justify-content: center;
   flex-direction: column;
   margin-bottom: 1vh;
+  width: 12vw;
+  text-align: left;
 }
 .ApplyToDaysInput {
   display: flex;
@@ -277,8 +288,11 @@ button {
 }
 .QuikShiftAddDaysInput {
   display: flex;
-  list-style: none;
+  /* list-style: none; */
   justify-content: left;
   flex-direction: row;
   margin-bottom: 1vh;
+}
+.ApplyToDaysInput input {
+  cursor: pointer;
 }
