@@ -6,36 +6,53 @@ class AddNewEmployees extends Component {
       <div>
         <h2>Add New Employees</h2>
         <div className="AddNewEmployeeContainer">
-          <section>
+          <section className="AddNewEmployee">
+            {/* These inputs will need to add data to EmployeesTable db (HttpPut). */}
+            {/* Then later be displayed on the Employees view (HttpGet). */}
             <div className="AddNewName">
               <p>Name</p>
             </div>
             <div className="InputName">
-              <input type="text" placeholder="Enter First Name" />
-              <input type="text" placeholder="Enter Last Name" />
+              <div>
+                <input type="text" placeholder="Enter First Name" />
+              </div>
+              <div>
+                <input type="text" placeholder="Enter Last Name" />
+              </div>
             </div>
+
             <div className="AddNewPhone">
               <p>Phone</p>
             </div>
             <div className="InputPhone">
               <input type="text" placeholder="Enter Phone Number" />
             </div>
+
             <div className="AddNewEmail">
               <p>Email</p>
             </div>
             <div className="InputEmail">
-              <input type="text" placeholder="Enter Email" />
+              <input type="text" placeholder="Enter Email Address" />
             </div>
-          </section>
 
-          <section className="PositionsList">
-            <div className="EditDeleteButton">
-              <p>Positions</p> <button>Edit/Delete</button>
+            <p>Select Positions</p>
+            {/* These hard-coded Select Positions inputs will come from PositionsTable db (HttpGet). */}
+            {/* Once they are selected they will add to EmployeePositionsTable (HttpPut). */}
+            <div className="ListedPositions">
+              <input type="radio" /> <label>Office Manager</label>
             </div>
-            <li>Office Manager</li>
-            <li>Developer</li>
-            <li>Senior Developer</li>
-            <li>CTO</li>
+            <div className="ListedPositions">
+              <input type="radio" /> <label>Junior Developer</label>
+            </div>
+            <div className="ListedPositions">
+              <input type="radio" /> <label>Developer</label>
+            </div>
+            <div className="ListedPositions">
+              <input type="radio" /> <label>CTO</label>
+            </div>
+            <div className="AddNewEmployeeButton">
+              <button>Add New Employee</button>
+            </div>
           </section>
         </div>
       </div>
