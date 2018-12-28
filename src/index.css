@@ -308,14 +308,14 @@ button {
   border-radius: 4px;
   margin: 1vw;
   background-color: rgb(247, 126, 56);
-  width: 20vw;
+  width: 15vw;
   height: 4vh;
 }
 .QuikShiftEditButtons {
   display: flex;
   justify-content: left;
   flex-direction: row;
-  margin: 6vh;
+  margin: 4vh;
 }
 .PositionSelector {
   display: flex;
