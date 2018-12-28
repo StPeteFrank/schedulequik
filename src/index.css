@@ -268,3 +268,17 @@ button {
   flex-direction: column;
   margin-bottom: 1vh;
 }
+.ApplyToDaysInput {
+  display: flex;
+  list-style: none;
+  justify-content: left;
+  flex-direction: column;
+  margin-bottom: 1vh;
+}
+.QuikShiftAddDaysInput {
+  display: flex;
+  list-style: none;
+  justify-content: left;
+  flex-direction: row;
+  margin-bottom: 1vh;
+}
