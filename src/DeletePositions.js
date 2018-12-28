@@ -8,21 +8,29 @@ class DeletePositions extends Component {
         <div className="DeletePositionContainer">
           <section>
             <p>Positions</p>
-            <div className="CurrentPositions">
-              <input type="radio" />
-              <label>Office Manager</label>
-              <input type="radio" placeholder="Junior Developer" />
-              <input type="radio" placeholder="Developer" />
-              <input type="radio" placeholder="CTO" />
-              {/* These input boxes need to come from the db of positions (http get) and need to be editable (http put). */}
+            <div className="DeleteCurrentPositions">
+              {/* Each ListedPosition needs to come from positions db (HttpGet).
+              Then each ListedPosition can be chosen and deleted from db (HttpDelete). */}
+              <div className="ListedPositions">
+                <input type="radio" /> <label>Office Manager</label>
+              </div>
+              <div className="ListedPositions">
+                <input type="radio" /> <label>Junior Developer</label>
+              </div>
+              <div className="ListedPositions">
+                <input type="radio" /> <label>Developer</label>
+              </div>
+              <div className="ListedPositions">
+                <input type="radio" /> <label>CTO</label>
+              </div>
             </div>
           </section>
 
           <section className="DeletePositionsButtons">
-            <button>Save</button>
-            <button>Delete</button>
-            {/* Delete button takes you to DeletePosition view.
-            Save button takes you back to AddPosition view. */}
+            <button>Delete Selected</button>
+            {/* Delete Selected button takes user back to AddPositions view. */}
+            <button>Edit Positions</button>
+            {/* Edit Positions button takes user back yo EditPositions view. */}
           </section>
         </div>
       </div>

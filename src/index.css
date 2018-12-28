@@ -187,7 +187,21 @@ button {
 }
 .DeletePositionsButtons {
   display: flex;
-  align-items: center;
+  align-items: left;
   flex-direction: column;
   margin-top: 6vh;
+}
+.DeleteCurrentPositions {
+  display: flex;
+  list-style: none;
+  justify-content: left;
+  flex-direction: column;
+  margin-bottom: 1vh;
+}
+.ListedPositions {
+  display: flex;
+  list-style: none;
+  justify-content: left;
+  flex-direction: row;
+  margin-bottom: 1vh;
 }
