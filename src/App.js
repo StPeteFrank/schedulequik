@@ -27,8 +27,8 @@ class App extends Component {
         {/* <Home /> */}
         {/* <Employees /> */}
         {/* <Schedules /> */}
-        <AddPositions />
-        {/* <EditPositions /> */}
+        {/* <AddPositions /> */}
+        <EditPositions />
         {/* <DeletePositions /> */}
         {/* <AddNewEmployees /> */}
         {/* <QuikShiftAdd /> */}
