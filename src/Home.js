@@ -10,7 +10,9 @@ class Home extends Component {
         </div>
         <div className="NavButtons">
           <button>EMPLOYEES</button>
+          {/* Employees button takes you Employees view. */}
           <button>SCHEDULES</button>
+          {/* Schedules button takes you Schedules view. */}
         </div>
       </div>
     )

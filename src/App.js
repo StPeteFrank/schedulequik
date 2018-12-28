@@ -16,6 +16,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        {/* This Header and Tabs will be on every view of this app. It serves as directory. */}
         <div className="Header">
           <h1>ScheduleQuik</h1>
         </div>
@@ -27,14 +28,14 @@ class App extends Component {
         <div />
         {/* <Home /> */}
         {/* <Employees /> */}
-        {/* <Schedules /> */}
+        <Schedules />
         {/* <AddPositions /> */}
         {/* <EditPositions /> */}
         {/* <DeletePositions /> */}
         {/* <AddNewEmployees /> */}
         {/* <QuikShiftAdd /> */}
         {/* <QuikShiftEdit /> */}
-        <ClearDeleteSchedule />
+        {/* <ClearDeleteSchedule /> */}
       </div>
     )
   }

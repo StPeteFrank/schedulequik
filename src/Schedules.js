@@ -10,13 +10,17 @@ class Schedules extends Component {
             <h3>Schedules</h3>
           </div>
           <div className="DeleteTabs">
+            {/* This DeleteTabs will take user to the ClearDelete view. */}
             <a href="#">CLEAR/DELETE</a>
           </div>
           <div className="ScheduleContainer">
+            {/* When user selects an empty cell from the Schedules view they will taken to the QuikShiftAdd view. */}
+            {/* If they select a cell that already has a shift they will be taken to the QuikShiftEdit view. */}
             <table className="ScheduleTable">
               <tbody>
                 <tr>
                   <th />
+                  {/* Hard-coded but would be great to add a feature that keeps track of what week it is. */}
                   <th>Jan-21 Mon</th>
                   <th>Jan-22 Tue</th>
                   <th>Jan-23 Wed</th>
@@ -26,6 +30,7 @@ class Schedules extends Component {
                   <th>Jan-27 Sun</th>
                 </tr>
                 <tr>
+                  {/* The names of employees needs to come from the EmployeesTable db (HttpGet). */}
                   <td>John Smith</td>
                   <td href="#" />
                   <td href="#" />

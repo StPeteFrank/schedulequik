@@ -10,10 +10,14 @@ class Employees extends Component {
             <h3>Employee List</h3>
           </div>
           <div className="AddEditTabs">
+            {/* Add/Edit Positions has 3 different selectable features that take users to their corresponding components view.
+          AddPosition, EditPosition, and DeletePosition views. */}
             <a href="#">ADD/EDIT POSITIONS</a>
+            {/* Add New Employee will take users to AddNewEmployee component view. */}
             <a href="#">ADD NEW EMPLOYEE</a>
           </div>
           <div className="EmployeeContainer">
+            {/* The EmployeeTable will come from EmployeesTable db (HttpGet). */}
             <table className="EmployeeTable">
               <tbody>
                 <tr>
