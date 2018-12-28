@@ -29,8 +29,8 @@ class App extends Component {
         {/* <Schedules /> */}
         {/* <AddPositions /> */}
         {/* <EditPositions /> */}
-        <DeletePositions />
-        {/* <AddNewEmployees /> */}
+        {/* <DeletePositions /> */}
+        <AddNewEmployees />
         {/* <QuikShiftAdd /> */}
         {/* <QuikShiftEdit /> */}
       </div>
