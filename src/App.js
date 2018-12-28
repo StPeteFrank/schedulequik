@@ -33,8 +33,8 @@ class App extends Component {
         {/* <DeletePositions /> */}
         {/* <AddNewEmployees /> */}
         {/* <QuikShiftAdd /> */}
-        <QuikShiftEdit />
-        {/* <ClearDeleteSchedule /> */}
+        {/* <QuikShiftEdit /> */}
+        <ClearDeleteSchedule />
       </div>
     )
   }
