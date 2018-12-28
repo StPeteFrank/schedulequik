@@ -10,6 +10,7 @@ import DeletePositions from './DeletePositions'
 import AddNewEmployees from './AddNewEmployees'
 import QuikShiftAdd from './QuikShiftAdd'
 import QuikShiftEdit from './QuikShiftEdit'
+import ClearDeleteSchedule from './ClearDeleteSchedule'
 
 class App extends Component {
   render() {
@@ -30,9 +31,10 @@ class App extends Component {
         {/* <AddPositions /> */}
         {/* <EditPositions /> */}
         {/* <DeletePositions /> */}
-        <AddNewEmployees />
-        {/* <QuikShiftAdd /> */}
+        {/* <AddNewEmployees /> */}
+        <QuikShiftAdd />
         {/* <QuikShiftEdit /> */}
+        {/* <ClearDeleteSchedule /> */}
       </div>
     )
   }
