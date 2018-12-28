@@ -11,7 +11,7 @@ class QuikShiftAdd extends Component {
             {/* "John Smith" needs to come from EmployeesTable db (HttpGet). */}
             <div className="SelectAPosition">
               <option value="">Select a Position</option>
-              {/* This positions drop-down menu needs to come from EmployeePositionsTable db (HttpGet). */}
+              {/* This positions drop-down menu needs to come from PositionsTable db (HttpGet). */}
               <select onChange="Select a Position" />
             </div>
             <div className="StartEndTimeInput">
