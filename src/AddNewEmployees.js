@@ -52,6 +52,8 @@ class AddNewEmployees extends Component {
             </div>
             <div className="AddNewEmployeeButton">
               <button>Add New Employee</button>
+              {/* Once AddNewEmployeeButton is clicked the new employee will be saved and
+              appear on the Employees view. The user will be taken back to the Employees view page. */}
             </div>
           </section>
         </div>
