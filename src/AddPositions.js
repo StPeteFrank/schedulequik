@@ -10,21 +10,19 @@ class AddPositions extends Component {
             <div className="AddButton">
               <p>New Positions</p> <button>Add</button>
             </div>
-
             <div>
               <input type="text" placeholder="Enter Position" />
             </div>
           </section>
+
           <section className="PositionsList">
             <div className="EditDeleteButton">
               <p>Positions</p> <button>Edit/Delete</button>
             </div>
-            <ul>
-              <li>Manager</li>
-              <li>Junior Developer</li>
-              <li>Developer</li>
-              <li>Senior Developer</li>
-            </ul>
+            <li>Office Manager</li>
+            <li>Developer</li>
+            <li>Senior Developer</li>
+            <li>CTO</li>
           </section>
         </div>
       </div>
