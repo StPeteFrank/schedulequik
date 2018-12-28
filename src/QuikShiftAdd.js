@@ -11,6 +11,7 @@ class QuikShiftAdd extends Component {
             {/* "John Smith" needs to come from EmployeesTable db (HttpGet). */}
             <div className="SelectAPosition">
               <option value="">Select a Position</option>
+              {/* This positions drop-down menu needs to come from EmployeePositionsTable db (HttpGet). */}
               <select onChange="Select a Position" />
             </div>
             <div className="StartEndTimeInput">
@@ -18,9 +19,12 @@ class QuikShiftAdd extends Component {
               <input type="text" placeholder="In Time" />
               <p>Finish</p>
               <input type="text" placeholder="Out Time" />
+              {/* These inputed In/Out Times will display on the schedule. */}
             </div>
 
             <div className="ApplyToDaysInput">
+              {/* This Apply to Days option will allow the user to populate multiple day with 
+            positions and in/out times. */}
               <p>Apply to Days</p>
               <div className="QuikShiftAddDaysInput">
                 <input type="radio" /> <label>Monday</label>
@@ -46,7 +50,9 @@ class QuikShiftAdd extends Component {
             </div>
             <div className="QuikShiftAddButtons">
               <button>Add Shift</button>
+              {/* Adds position, time, and days selected to the Schedules view. */}
               <button>Cancel</button>
+              {/* After either of these buttons are clicked the user will be taken to the Schedules view. */}
             </div>
           </section>
         </div>

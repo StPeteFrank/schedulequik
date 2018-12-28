@@ -272,7 +272,6 @@ button {
 }
 .StartEndTimeInput {
   display: flex;
-  /* list-style: none; */
   justify-content: center;
   flex-direction: column;
   margin-bottom: 1vh;
@@ -285,10 +284,10 @@ button {
   justify-content: left;
   flex-direction: column;
   margin-bottom: 1vh;
+  /* text-align: left; */
 }
 .QuikShiftAddDaysInput {
   display: flex;
-  /* list-style: none; */
   justify-content: left;
   flex-direction: row;
   margin-bottom: 1vh;
