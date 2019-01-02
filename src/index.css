@@ -14,8 +14,8 @@ code {
     monospace;
 }
 .Header {
-  /* background-color: rgb(247, 126, 56); */
-  background-color: rgb(49, 69, 185);
+  background-color: #2d4b9b;
+  /* background-color: rgb(49, 69, 185); */
   padding: 2vh;
   color: whitesmoke;
 }
@@ -60,6 +60,24 @@ h3 {
   background-image: linear-gradient(rgb(245, 138, 76), rgb(170, 165, 165));
   color: whitesmoke;
 }
+.AddEditTabs {
+  margin-left: 1vw;
+  margin-right: 1vw;
+  border: 1px solid black;
+}
+.EmployeeContainer {
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+.DeleteTabs {
+  margin-left: 1vw;
+  margin-right: 1vw;
+  border: 1px solid black;
+}
+.ScheduleContainer {
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
 .AddEditTabs a {
   color: whitesmoke;
   text-decoration: none;
@@ -67,7 +85,7 @@ h3 {
 }
 .AddEditTabs {
   /* background-color: rgb(26, 26, 250); */
-  background-color: rgb(49, 69, 185);
+  background-color: #2d4b9b;
   color: whitesmoke;
   display: flex;
   justify-content: space-evenly;
@@ -94,7 +112,7 @@ tr {
   width: 100%;
 }
 .DeleteTabs {
-  background-color: rgb(49, 69, 185);
+  background-color: #2d4b9b;
   color: whitesmoke;
   display: flex;
   justify-content: space-evenly;
