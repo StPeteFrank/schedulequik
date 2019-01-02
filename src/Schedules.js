@@ -32,7 +32,9 @@ class Schedules extends Component {
                 <tr>
                   {/* The names of employees needs to come from the EmployeesTable db (HttpGet). */}
                   <td>John Smith</td>
-                  <td href="#" />
+                  <td>
+                    9am-5pm<p>Office Manager</p>
+                  </td>
                   <td href="#" />
                   <td href="#" />
                   <td href="#" />

@@ -14,14 +14,15 @@ code {
     monospace;
 }
 .Header {
-  background-color: rgb(247, 126, 56);
+  /* background-color: rgb(247, 126, 56); */
+  background-color: rgb(49, 69, 185);
   padding: 2vh;
   color: whitesmoke;
 }
 .Tabs {
   display: flex;
   justify-content: space-evenly;
-  background-color: rgb(26, 26, 250);
+  background-color: rgb(245, 138, 76);
   color: whitesmoke;
   padding: 1vh;
 }
@@ -64,7 +65,8 @@ h3 {
   cursor: pointer;
 }
 .AddEditTabs {
-  background-color: rgb(26, 26, 250);
+  /* background-color: rgb(26, 26, 250); */
+  background-color: rgb(49, 69, 185);
   color: whitesmoke;
   display: flex;
   justify-content: space-evenly;
@@ -91,7 +93,7 @@ tr {
   width: 100%;
 }
 .DeleteTabs {
-  background-color: rgb(26, 26, 250);
+  background-color: rgb(49, 69, 185);
   color: whitesmoke;
   display: flex;
   justify-content: space-evenly;
@@ -125,7 +127,7 @@ td {
 .AddPositionContainer button {
   border-radius: 4px;
   margin: 1vw;
-  background-color: rgb(247, 126, 56);
+  background-color: rgb(245, 138, 76);
 }
 .AddButton {
   cursor: pointer;
@@ -166,7 +168,7 @@ button {
 .EditPositionContainer button {
   border-radius: 4px;
   margin: 1vw;
-  background-color: rgb(247, 126, 56);
+  background-color: rgb(245, 138, 76);
   width: 20vw;
 }
 .EditPositionsButtons {
@@ -187,7 +189,7 @@ button {
 .DeletePositionContainer button {
   border-radius: 4px;
   margin: 1vw;
-  background-color: rgb(247, 126, 56);
+  background-color: rgb(245, 138, 76);
 }
 .DeletePositionsButtons {
   display: flex;
@@ -221,7 +223,7 @@ button {
 .AddNewEmployeeContainer button {
   border-radius: 4px;
   margin: 1vw;
-  background-color: rgb(247, 126, 56);
+  background-color: rgb(245, 138, 76);
 }
 .AddNewEmployee {
   font-display: flex;
@@ -239,7 +241,7 @@ button {
   border-radius: 4px;
   margin-top: 3vh;
   margin-bottom: 3vh;
-  background-color: rgb(247, 126, 56);
+  background-color: rgb(245, 138, 76);
   padding: 1vh;
   width: 30vw;
 }
@@ -255,7 +257,7 @@ button {
 .QuikShiftAddContainer button {
   border-radius: 4px;
   margin: 1vw;
-  background-color: rgb(247, 126, 56);
+  background-color: rgb(245, 138, 76);
   width: 20vw;
   height: 4vh;
 }
@@ -310,7 +312,7 @@ button {
 .QuikShiftEditContainer button {
   border-radius: 4px;
   margin: 1vw;
-  background-color: rgb(247, 126, 56);
+  background-color: rgb(245, 138, 76);
   width: 15vw;
   height: 4vh;
 }
@@ -339,7 +341,7 @@ button {
 }
 .ClearDeleteContainer button {
   border-radius: 4px;
-  background-color: rgb(247, 126, 56);
+  background-color: rgb(245, 138, 76);
   width: 20vw;
   height: 4vh;
   margin: 4vh;
