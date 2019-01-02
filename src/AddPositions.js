@@ -12,7 +12,7 @@ class AddPositions extends Component {
             </div>
             <div>
               <input type="text" placeholder="Enter Position" />
-              {/* User inputs text of new postion and clicks Add button to post onto db (HttpPost). */}
+              {/* User inputs text of new position and clicks Add button to post onto db (HttpPost). */}
               {/* Then newly put position appears under PositionsList section (httpGet). */}
             </div>
           </section>
