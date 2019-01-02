@@ -142,6 +142,7 @@ td {
   background-color: rgb(173, 169, 169);
   margin-left: 10vw;
   margin-right: 10vw;
+  padding: 2vh;
 }
 .AddPositionContainer button {
   border-radius: 4px;
@@ -169,6 +170,7 @@ li {
 button {
   cursor: pointer;
   color: whitesmoke;
+  padding: 1vh;
 }
 .CurrentPositions {
   display: flex;
