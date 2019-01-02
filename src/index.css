@@ -358,7 +358,7 @@ button {
   flex-direction: column;
   justify-content: space-evenly;
   background-color: rgb(173, 169, 169);
-  margin: 8vw;
+  margin: 10vw;
 }
 .ClearDeleteContainer button {
   border-radius: 4px;
