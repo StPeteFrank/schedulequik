@@ -13,6 +13,9 @@ class DeletePositions extends Component {
               Then each ListedPosition can be chosen and deleted from db (HttpDelete). */}
               <div className="ListedPositions">
                 <input type="radio" /> <label>Office Manager</label>
+                {/* <input type="checkbox" /> */}
+                {/* Radio will only allow me to choose one. */}
+                {/* Custom checkbox . Not really! */}
               </div>
               <div className="ListedPositions">
                 <input type="radio" /> <label>Junior Developer</label>

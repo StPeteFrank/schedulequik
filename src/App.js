@@ -26,16 +26,16 @@ class App extends Component {
           <a href="#">SCHEDULES</a>
         </div>
         <div />
-        {/* <Home /> */}
-        {/* <Employees /> */}
+        <Home />
+        <Employees />
         <Schedules />
-        {/* <AddPositions /> */}
-        {/* <EditPositions /> */}
-        {/* <DeletePositions /> */}
-        {/* <AddNewEmployees /> */}
-        {/* <QuikShiftAdd /> */}
-        {/* <QuikShiftEdit /> */}
-        {/* <ClearDeleteSchedule /> */}
+        <AddPositions />
+        <EditPositions />
+        <DeletePositions />
+        <AddNewEmployees />
+        <QuikShiftAdd />
+        <QuikShiftEdit />
+        <ClearDeleteSchedule />
       </div>
     )
   }

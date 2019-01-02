@@ -84,6 +84,9 @@ th {
   border-spacing: none;
   border: 1px solid black;
 }
+tr {
+  height: 2em;
+}
 .EmployeeTable {
   width: 100%;
 }
