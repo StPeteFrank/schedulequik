@@ -51,7 +51,7 @@ class AddNewEmployees extends Component {
               <input type="radio" /> <label>CTO</label>
             </div>
             <div className="AddNewEmployeeButton">
-              <button>Add New Employee</button>
+              <button>ADD NEW EMPLOYEE</button>
               {/* Once AddNewEmployeeButton is clicked the new employee will be saved and
               appear on the Employees view. The user will be taken back to the Employees view page. */}
             </div>

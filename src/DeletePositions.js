@@ -30,9 +30,9 @@ class DeletePositions extends Component {
           </section>
 
           <section className="DeletePositionsButtons">
-            <button>Delete Selected</button>
+            <button>DELETE SELECTED</button>
             {/* Delete Selected button takes user back to AddPositions view. */}
-            <button>Edit Positions</button>
+            <button>EDIT POSITIONS</button>
             {/* Edit Positions button takes user back yo EditPositions view. */}
           </section>
         </div>

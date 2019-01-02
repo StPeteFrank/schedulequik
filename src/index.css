@@ -57,7 +57,8 @@ h3 {
   width: 40vw;
   cursor: pointer;
   border-color: rgba(0, 0, 0, 0.753);
-  background-image: linear-gradient(rgb(247, 126, 56), rgb(170, 165, 165));
+  background-image: linear-gradient(rgb(245, 138, 76), rgb(170, 165, 165));
+  color: whitesmoke;
 }
 .AddEditTabs a {
   color: whitesmoke;
@@ -128,6 +129,7 @@ td {
   border-radius: 4px;
   margin: 1vw;
   background-color: rgb(245, 138, 76);
+  color: whitesmoke;
 }
 .AddButton {
   cursor: pointer;
@@ -148,6 +150,7 @@ li {
 
 button {
   cursor: pointer;
+  color: whitesmoke;
 }
 .CurrentPositions {
   display: flex;

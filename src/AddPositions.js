@@ -8,7 +8,7 @@ class AddPositions extends Component {
         <div className="AddPositionContainer">
           <section>
             <div className="AddButton">
-              <p>New Positions</p> <button>Add</button>
+              <p>New Positions</p> <button>ADD</button>
             </div>
             <div>
               <input type="text" placeholder="Enter Position" />
@@ -19,7 +19,7 @@ class AddPositions extends Component {
 
           <section className="PositionsList">
             <div className="EditDeleteButton">
-              <p>Positions</p> <button>Edit/Delete</button>
+              <p>Positions</p> <button>EDIT/DELETE</button>
               {/* Edit/Delete button takes user to EditPositions view. */}
             </div>
             <li>Office Manager</li>

@@ -49,9 +49,9 @@ class QuikShiftAdd extends Component {
               </div>
             </div>
             <div className="QuikShiftAddButtons">
-              <button>Add Shift</button>
+              <button>ADD SHIFT</button>
               {/* Adds position, time, and days selected to the Schedules view. */}
-              <button>Cancel</button>
+              <button>CANCEL</button>
               {/* After either of these buttons are clicked the user will be taken to the Schedules view. */}
             </div>
           </section>

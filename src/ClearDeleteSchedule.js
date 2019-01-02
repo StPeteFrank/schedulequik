@@ -11,7 +11,7 @@ class ClearDeleteSchedule extends Component {
           </section>
 
           <section className="ClearDeleteButtons">
-            <button>Clear Week</button>
+            <button>CLEAR WEEK</button>
           </section>
         </div>
       </div>

@@ -23,11 +23,11 @@ class QuikShiftEdit extends Component {
               {/* These inputed In/Out Times will display on the Schedules view. */}
             </div>
             <div className="QuikShiftEditButtons">
-              <button>Save Shift</button>
+              <button>SAVE SHIFT</button>
               {/* Adds position, time, and days selected to the Schedules view. */}
-              <button>Delete Shift</button>
+              <button>DELETE SHIFT</button>
               {/* Removes added shift from the Schedules view. */}
-              <button>Cancel</button>
+              <button>CANCEL</button>
               {/* After any of these buttons are clicked the user will be taken to the Schedules view. */}
             </div>
           </section>
