@@ -36,8 +36,6 @@ class AddNewEmployees extends Component {
         <h2>Add New Employees</h2>
         <div className="AddNewEmployeeContainer">
           <section className="AddNewEmployee">
-            {/* These inputs will need to add data to EmployeesTable db (HttpPut). */}
-            {/* Then later be displayed on the Employees view (HttpGet). */}
             <div className="AddNewName">
               <p>Name</p>
             </div>
@@ -101,8 +99,10 @@ class AddNewEmployees extends Component {
             <p>Select Employees</p>
             {/* These hard-coded Select Positions inputs will come from PositionsTable db (HttpGet). */}
             {/* Once they are selected they will add to EmployeePositionsTable (HttpPut). */}
+            {/* {this.state.allEmployees.map(employee => {
+                  return ( */}
             <div className="ListedPositions">
-              <input type="checkbox" /> <label>Greg Banana</label>
+              <input type="checkbox" /> <label>Hardcoded Harry</label>
             </div>
             <div className="ListedPositions">
               <input type="checkbox" /> <label>Jane Doe</label>
