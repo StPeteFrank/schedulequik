@@ -50,7 +50,7 @@ h3 {
   color: grey;
   align-items: center;
 }
-.NavButtons button {
+.NavButtons .link {
   display: flex;
   justify-content: center;
   padding: 0.5rem;
@@ -60,6 +60,8 @@ h3 {
   border-color: rgba(0, 0, 0, 0.753);
   background-image: linear-gradient(rgb(94, 227, 250), rgb(37, 76, 150));
   color: whitesmoke;
+  text-decoration: none;
+  border: 1px black solid;
 }
 .AddEditTabs {
   margin-left: 1vw;

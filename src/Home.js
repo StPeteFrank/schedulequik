@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 class Home extends Component {
   render() {
@@ -9,10 +10,13 @@ class Home extends Component {
           <h3>Welcome John Smith, Office Manager</h3>
         </div>
         <div className="NavButtons">
-          <button>EMPLOYEES</button>
-          {/* Employees button takes you Employees view. */}
-          <button>SCHEDULES</button>
-          {/* Schedules button takes you Schedules view. */}
+          <Link to="/employees" className="link">
+            EMPLOYEES
+          </Link>
+
+          <Link to="/schedules" className="link">
+            SCHEDULES
+          </Link>
         </div>
       </div>
     )
