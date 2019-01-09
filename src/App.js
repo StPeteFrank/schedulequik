@@ -1,46 +1,38 @@
 import React, { Component } from 'react'
-import logo from './logo.svg'
 import './App.css'
 import Home from './Home'
 import Employees from './Employees'
 import Schedules from './Schedules'
 import AddPositions from './AddPositions'
-import EditPositions from './EditPositions'
-import DeletePositions from './DeletePositions'
 import AddNewEmployees from './AddNewEmployees'
 import QuikShiftAdd from './QuikShiftAdd'
-import QuikShiftEdit from './QuikShiftEdit'
-import ClearDeleteSchedule from './ClearDeleteSchedule'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+// import axios from 'axios'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        {/* This Header and Tabs will be on every view of this app. It serves as directory. */}
-        <div className="Header">
-          <h1>ScheduleQuik</h1>
+      <Router>
+        <div className="App">
+          {/* This Header and Tabs will be on every view of this app. It serves as directory. */}
+          <div className="Header">
+            <h1>ScheduleQuik</h1>
+          </div>
+          <div className="Tabs">
+            <a href="#">HOME</a>
+            <a href="#">EMPLOYEES</a>
+            <a href="#">SCHEDULES</a>
+          </div>
+          <div />
+          <Route exact path="/" component={Home} />
+          <Route path="/home" component={Home} />
+          <Route path="/employees" component={Employees} />
+          <Route path="/schedules" component={Schedules} />
+          <Route path="/addpositions" component={AddPositions} />
+          <Route path="/addnewemployees" component={AddNewEmployees} />
+          <Route path="/quikshiftadd" component={QuikShiftAdd} />
         </div>
-        <div className="Tabs">
-          <a href="#">HOME</a>
-          <a href="#">EMPLOYEES</a>
-          <a href="#">SCHEDULES</a>
-        </div>
-        <div />
-        <Home />
-        <Employees />
-        <Schedules />
-        {/* Add, Edit, and DeletePositions should be on one view. */}
-        <AddPositions />
-        {/* <EditPositions /> */}
-        {/* <DeletePositions /> */}
-        {/* Add NewEmployees should be on its own view. */}
-        <AddNewEmployees />
-        {/* QuikAdd, QuikEdit, and ClearDelete should be on the same view. */}
-        <QuikShiftAdd />
-        {/* <QuikShiftEdit /> */}
-        {/* <ClearDeleteSchedule /> */}
-        {/* Six views in total. */}
-      </div>
+      </Router>
     )
   }
 }
