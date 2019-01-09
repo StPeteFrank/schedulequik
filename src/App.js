@@ -19,9 +19,9 @@ class App extends Component {
             <h1>ScheduleQuik</h1>
           </div>
           <div className="Tabs">
-            <a href="#">HOME</a>
-            <a href="#">EMPLOYEES</a>
-            <a href="#">SCHEDULES</a>
+            <Link to="/home">HOME</Link>
+            <Link to="/employees">EMPLOYEES</Link>
+            <Link to="/schedules">SCHEDULES</Link>
           </div>
           <div />
           <Route exact path="/" component={Home} />
