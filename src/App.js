@@ -29,13 +29,17 @@ class App extends Component {
         <Home />
         <Employees />
         <Schedules />
+        {/* Add, Edit, and DeletePositions should be on one view. */}
         <AddPositions />
         <EditPositions />
         <DeletePositions />
+        {/* Add NewEmployees should be on its own view. */}
         <AddNewEmployees />
+        {/* QuikAdd, QuikEdit, and ClearDelete should be on the same view. */}
         <QuikShiftAdd />
         <QuikShiftEdit />
         <ClearDeleteSchedule />
+        {/* Six views in total. */}
       </div>
     )
   }

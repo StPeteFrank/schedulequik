@@ -57,6 +57,35 @@ class AddNewEmployees extends Component {
             </div>
           </section>
         </div>
+
+        <h2>Delete Employees</h2>
+        <div className="DeleteEmployeeContainer">
+          <section className="DeleteEmployee">
+            {/* These inputs will need to add data to EmployeesTable db (HttpPut). */}
+            {/* Then later be displayed on the Employees view (HttpGet). */}
+
+            <p>Select Employees</p>
+            {/* These hard-coded Select Positions inputs will come from PositionsTable db (HttpGet). */}
+            {/* Once they are selected they will add to EmployeePositionsTable (HttpPut). */}
+            <div className="ListedPositions">
+              <input type="checkbox" /> <label>Greg Banana</label>
+            </div>
+            <div className="ListedPositions">
+              <input type="checkbox" /> <label>Jane Doe</label>
+            </div>
+            <div className="ListedPositions">
+              <input type="checkbox" /> <label>Jennifer Zayne</label>
+            </div>
+            <div className="ListedPositions">
+              <input type="checkbox" /> <label>Joe Banana</label>
+            </div>
+            <div className="AddNewEmployeeButton">
+              <button>DELETE EMPLOYEE</button>
+              {/* Once AddNewEmployeeButton is clicked the new employee will be saved and
+              appear on the Employees view. The user will be taken back to the Employees view page. */}
+            </div>
+          </section>
+        </div>
       </div>
     )
   }
