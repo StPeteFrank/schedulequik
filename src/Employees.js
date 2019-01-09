@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 class Employees extends Component {
   render() {
@@ -10,11 +11,8 @@ class Employees extends Component {
             <h3>Employee List</h3>
           </div>
           <div className="AddEditTabs">
-            {/* Add/Edit Positions has 3 different selectable features that take users to their corresponding components view.
-          AddPosition, EditPosition, and DeletePosition views. */}
-            <a href="#">ADD/EDIT POSITIONS</a>
-            {/* Add New Employee will take users to AddNewEmployee component view. */}
-            <a href="#">ADD NEW EMPLOYEE</a>
+            <Link to="/addpositions">ADD/EDIT POSITIONS</Link>
+            <Link to="/addnewemployees">ADD NEW EMPLOYEE</Link>
           </div>
           <div className="EmployeeContainer">
             {/* The EmployeeTable will come from EmployeesTable db (HttpGet). */}
