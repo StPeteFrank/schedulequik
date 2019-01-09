@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 class Schedules extends Component {
   render() {
@@ -8,10 +9,11 @@ class Schedules extends Component {
           <div classname="CompanyName">
             <h2>ABC Company</h2>
             <h3>Schedules</h3>
+            <h4>Click on any day to add to schedule.</h4>
           </div>
           <div className="DeleteTabs">
             {/* This DeleteTabs will take user to the ClearDelete view. */}
-            <a href="#">CLEAR/DELETE</a>
+            <Link to="/quikshiftadd">ADD/ EDIT/ DELETE</Link>
           </div>
           <div className="ScheduleContainer">
             {/* When user selects an empty cell from the Schedules view they will taken to the QuikShiftAdd view. */}

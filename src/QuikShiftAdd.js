@@ -87,7 +87,7 @@ class QuikShiftAdd extends Component {
           </div>
         </div>
         <div>
-          <h2>Clear/Delete Schedule</h2>
+          <h2>Delete Schedule</h2>
           <div className="ClearDeleteContainer">
             <section>
               <p>Delete Schedule?</p>
