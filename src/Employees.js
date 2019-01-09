@@ -3,6 +3,25 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import axios from 'axios'
 
 class Employees extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      allEmployees: []
+    }
+  }
+
+  componentDidMount() {
+    this.loadAllEmployees()
+  }
+
+  loadAllEmployees = () => {
+    axios.get('https://localhost:5001/api/employees').then(resp => {
+      this.setState({
+        allEmployees: resp.data
+      })
+    })
+  }
+
   render() {
     return (
       <div>
@@ -25,24 +44,16 @@ class Employees extends Component {
                   <th>PHONE</th>
                   <th>EMAIL</th>
                 </tr>
-                <tr>
-                  <td>John</td>
-                  <td>Smith</td>
-                  <td>727-111-2222</td>
-                  <td>abc@zzz.com</td>
-                </tr>
-                <tr>
-                  <td>Anna</td>
-                  <td>Banana</td>
-                  <td>727-333-4444</td>
-                  <td>def@zzz.com</td>
-                </tr>
-                <tr>
-                  <td>Jennifer</td>
-                  <td>Zayne</td>
-                  <td>727-555-6666</td>
-                  <td>ghi@zzz.com</td>
-                </tr>
+                {this.state.allEmployees.map(employee => {
+                  return (
+                    <tr>
+                      <td>{employee.firstName}</td>
+                      <td>{employee.lastName}</td>
+                      <td>{employee.phoneNumber}</td>
+                      <td>{employee.emailAddress}</td>
+                    </tr>
+                  )
+                })}
               </tbody>
             </table>
           </div>
