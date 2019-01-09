@@ -9,7 +9,7 @@ class Schedules extends Component {
           <div classname="CompanyName">
             <h2>ABC Company</h2>
             <h3>Schedules</h3>
-            <h4>Click on any day to add to schedule.</h4>
+            <h4>Click on any day to add, edit, or delete shifts.</h4>
           </div>
           <div className="DeleteTabs">
             {/* This DeleteTabs will take user to the ClearDelete view. */}
