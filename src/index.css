@@ -258,7 +258,7 @@ button {
 }
 .InputName {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: left;
   flex-direction: row;
 }
 .AddNewEmployee button {
