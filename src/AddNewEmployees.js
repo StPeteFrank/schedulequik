@@ -35,21 +35,6 @@ class AddNewEmployees extends Component {
               <input type="text" placeholder="Enter Email Address" />
             </div>
 
-            <p>Select Positions</p>
-            {/* These hard-coded Select Positions inputs will come from PositionsTable db (HttpGet). */}
-            {/* Once they are selected they will add to EmployeePositionsTable (HttpPut). */}
-            <div className="ListedPositions">
-              <input type="checkbox" /> <label>Office Manager</label>
-            </div>
-            <div className="ListedPositions">
-              <input type="checkbox" /> <label>Junior Developer</label>
-            </div>
-            <div className="ListedPositions">
-              <input type="checkbox" /> <label>Developer</label>
-            </div>
-            <div className="ListedPositions">
-              <input type="checkbox" /> <label>CTO</label>
-            </div>
             <div className="AddNewEmployeeButton">
               <button>ADD NEW EMPLOYEE</button>
               {/* Once AddNewEmployeeButton is clicked the new employee will be saved and

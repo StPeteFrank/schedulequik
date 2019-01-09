@@ -11,8 +11,8 @@ class Employees extends Component {
             <h3>Employee List</h3>
           </div>
           <div className="AddEditTabs">
-            <Link to="/addpositions">ADD/EDIT POSITIONS</Link>
             <Link to="/addnewemployees">ADD NEW EMPLOYEE</Link>
+            <Link to="/addpositions">ADD/EDIT POSITIONS</Link>
           </div>
           <div className="EmployeeContainer">
             {/* The EmployeeTable will come from EmployeesTable db (HttpGet). */}
