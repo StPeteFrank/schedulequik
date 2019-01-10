@@ -151,7 +151,7 @@ td {
   border: 1px solid black;
   border-radius: 10px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   background-color: rgb(173, 169, 169);
   margin-left: 10vw;
   margin-right: 10vw;
@@ -263,12 +263,13 @@ button {
 }
 .AddNewEmployee {
   font-display: flex;
+  justify-content: center;
   flex-direction: column;
   text-align: left;
 }
 .InputName {
   display: flex;
-  justify-content: left;
+  justify-content: center;
   flex-direction: row;
 }
 .AddNewEmployee button {
@@ -302,7 +303,7 @@ button {
 }
 .InputName {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-direction: row;
 }
 .DeleteEmployee button {

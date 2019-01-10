@@ -88,13 +88,13 @@ class AddPositions extends Component {
 
           <section className="PositionsList">
             <div className="EditDeleteButton">
-              <p>Positions</p>
+              {/* <p>Positions</p> */}
               {/* Edit/Delete button takes user to EditPositions view. */}
             </div>
-            <li>Hardcoded Position</li>
+            {/* <li>Hardcoded Position</li>
             <li>Developer</li>
             <li>Senior Developer</li>
-            <li>CTO</li>
+            <li>CTO</li> */}
             {/* These are hard-coded and will need to get positions from db (HttpGet). */}
           </section>
         </div>
