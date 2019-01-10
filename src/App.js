@@ -7,6 +7,7 @@ import AddPositions from './AddPositions'
 import AddNewEmployees from './AddNewEmployees'
 import QuikShiftAdd from './QuikShiftAdd'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import Positions from './Positions'
 // import axios from 'axios'
 
 class App extends Component {
@@ -21,12 +22,14 @@ class App extends Component {
           <div className="Tabs">
             <Link to="/home">HOME</Link>
             <Link to="/employees">EMPLOYEES</Link>
+            <Link to="/positions">POSITIONS</Link>
             <Link to="/schedules">SCHEDULES</Link>
           </div>
           <div />
           <Route exact path="/" component={Home} />
           <Route path="/home" component={Home} />
           <Route path="/employees" component={Employees} />
+          <Route path="/positions" component={Positions} />
           <Route path="/schedules" component={Schedules} />
           <Route path="/addpositions" component={AddPositions} />
           <Route path="/addnewemployees" component={AddNewEmployees} />

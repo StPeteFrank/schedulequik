@@ -2,22 +2,22 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import axios from 'axios'
 
-class Employees extends Component {
+class Positions extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      allEmployees: []
+      allPositions: []
     }
   }
 
   componentDidMount() {
-    this.loadAllEmployees()
+    this.loadAllPositions()
   }
 
-  loadAllEmployees = () => {
-    axios.get('https://localhost:5001/api/employees').then(resp => {
+  loadAllPositions = () => {
+    axios.get('https://localhost:5001/api/positions').then(resp => {
       this.setState({
-        allEmployees: resp.data
+        allPositions: resp.data
       })
     })
   }
@@ -28,28 +28,19 @@ class Employees extends Component {
         <div className="App">
           <div className="CompanyName">
             <h2>ABC Company</h2>
-            <h3>Employee List</h3>
+            <h3>Position List</h3>
           </div>
           <div className="AddEditTabs">
-            <Link to="/addnewemployees">ADD/DELETE EMPLOYEE</Link>
+            <Link to="/addpositions">ADD/DELETE POSITIONS</Link>
           </div>
           <div className="EmployeeContainer">
             {/* The EmployeeTable will come from EmployeesTable db (HttpGet). */}
             <table className="EmployeeTable">
               <tbody>
-                <tr>
-                  <th>FIRST</th>
-                  <th>LAST</th>
-                  <th>PHONE</th>
-                  <th>EMAIL</th>
-                </tr>
-                {this.state.allEmployees.map(employee => {
+                {this.state.allPositions.map(position => {
                   return (
                     <tr>
-                      <td>{employee.firstName}</td>
-                      <td>{employee.lastName}</td>
-                      <td>{employee.phoneNumber}</td>
-                      <td>{employee.emailAddress}</td>
+                      <td>{position.positionName}</td>
                     </tr>
                   )
                 })}
@@ -62,4 +53,4 @@ class Employees extends Component {
   }
 }
 
-export default Employees
+export default Positions
