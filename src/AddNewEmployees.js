@@ -6,7 +6,8 @@ class AddNewEmployees extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      allEmployees: []
+      allEmployees: [],
+      deleteEmployee: []
     }
   }
 
@@ -23,6 +24,12 @@ class AddNewEmployees extends Component {
         phoneNumber: this.state.phoneNumber,
         emailAddress: this.state.emailAddress
       })
+      .then(this.loadAllEmployees())
+  }
+
+  deleteEmployeeFromApi = () => {
+    axios
+      .delete('https://localhost:5001/api/employees/firstname')
       .then(this.loadAllEmployees())
   }
 
