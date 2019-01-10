@@ -127,7 +127,7 @@ class AddNewEmployees extends Component {
         <h2>Delete Employees</h2>
         <div className="DeleteEmployeeContainer">
           <section className="DeleteEmployee">
-            <p>Select Employee</p>
+            <p>Select Employees</p>
             {this.state.allEmployees.map(employee => {
               return (
                 <div className="ListedPositions">

@@ -102,7 +102,7 @@ class AddPositions extends Component {
         <h2>Delete Positions</h2>
         <div className="DeletePositionContainer">
           <section>
-            <p>Positions</p>
+            <p>Select Positions</p>
             {this.state.allPositions.map(position => {
               return (
                 <div className="ListedPositions">
