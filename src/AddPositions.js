@@ -6,25 +6,63 @@ class AddPositions extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      allPositions: []
+      allPositions: [],
+      deletePosition: [],
+      positionIDsSelectedForDelete: []
     }
+  }
+
+  componentDidMount() {
+    this.loadAllPositions()
   }
 
   addPositionToApi = e => {
     e.preventDefault()
     axios
       .post('https://localhost:5001/api/positions', {
-        positionName: this.state.positionName
+        PositionName: this.state.positionName
       })
-      .then(response => {
-        //TODO: redirect to /employees using react router (or vanilla js)
-      })
+      .then(this.loadAllPositions())
+  }
+
+  deletePositionFromApi = () => {
+    axios
+      .delete('https://localhost:5001/api/positions/id')
+      .then(this.loadAllPositions())
   }
 
   handleChange = e => {
     this.setState({
       [e.target.name]: e.target.value
     })
+  }
+
+  loadAllPositions = () => {
+    axios.get('https://localhost:5001/api/positions').then(resp => {
+      this.setState({
+        allPositions: resp.data
+      })
+    })
+  }
+
+  _selectPositionForDeletion = event => {
+    const selectedPositionID = event.target.value
+
+    if (this.state.positionIDsSelectedForDelete.includes(selectedPositionID)) {
+      // remove that id from the array
+      const newIDs = this.state.positionIDsSelectedForDelete.filter(
+        id => id != selectedPositionID
+      )
+
+      this.setState({ positionIDsSelectedForDelete: newIDs })
+    } else {
+      // Make a list of new IDs with the selected ID appended
+      const newIDs = this.state.positionIDsSelectedForDelete.concat([
+        selectedPositionID
+      ])
+
+      this.setState({ positionIDsSelectedForDelete: newIDs })
+    }
   }
 
   render() {
@@ -65,29 +103,24 @@ class AddPositions extends Component {
         <div className="DeletePositionContainer">
           <section>
             <p>Positions</p>
-            <div className="DeleteCurrentPositions">
-              {/* Each ListedPosition needs to come from positions db (HttpGet).
-              Then each ListedPosition can be chosen and deleted from db (HttpDelete). */}
-              <div className="ListedPositions">
-                <input type="checkbox" /> <label>Hardcoded Position</label>
-                {/* <input type="checkbox" /> */}
-                {/* Radio will only allow me to choose one. */}
-                {/* Custom checkbox . Not really! */}
-              </div>
-              <div className="ListedPositions">
-                <input type="checkbox" /> <label>Junior Developer</label>
-              </div>
-              <div className="ListedPositions">
-                <input type="checkbox" /> <label>Developer</label>
-              </div>
-              <div className="ListedPositions">
-                <input type="checkbox" /> <label>CTO</label>
-              </div>
-            </div>
+            {this.state.allPositions.map(position => {
+              return (
+                <div className="ListedPositions">
+                  <input
+                    type="checkbox"
+                    value={position.id}
+                    onClick={this._selectPositionForDeletion}
+                  />
+                  <label>{position.positionName}</label>
+                </div>
+              )
+            })}
           </section>
 
           <section className="DeletePositionsButtons">
-            <button>DELETE SELECTED</button>
+            <button onClick={this.deletePositionFromApi}>
+              DELETE POSITION
+            </button>
             {/* Delete Selected button takes user back to AddPositions view. */}
           </section>
         </div>

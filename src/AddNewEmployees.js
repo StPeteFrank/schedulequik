@@ -7,7 +7,8 @@ class AddNewEmployees extends Component {
     super(props)
     this.state = {
       allEmployees: [],
-      deleteEmployee: []
+      deleteEmployee: [],
+      employeeIDsSelectedForDelete: []
     }
   }
 
@@ -45,6 +46,26 @@ class AddNewEmployees extends Component {
         allEmployees: resp.data
       })
     })
+  }
+
+  _selectEmployeeForDeletion = event => {
+    const selectedEmployeeID = event.target.value
+
+    if (this.state.employeeIDsSelectedForDelete.includes(selectedEmployeeID)) {
+      // remove that id from the array
+      const newIDs = this.state.employeeIDsSelectedForDelete.filter(
+        id => id != selectedEmployeeID
+      )
+
+      this.setState({ employeeIDsSelectedForDelete: newIDs })
+    } else {
+      // Make a list of new IDs with the selected ID appended
+      const newIDs = this.state.employeeIDsSelectedForDelete.concat([
+        selectedEmployeeID
+      ])
+
+      this.setState({ employeeIDsSelectedForDelete: newIDs })
+    }
   }
 
   render() {
@@ -110,7 +131,11 @@ class AddNewEmployees extends Component {
             {this.state.allEmployees.map(employee => {
               return (
                 <div className="ListedPositions">
-                  <input type="checkbox" />{' '}
+                  <input
+                    type="checkbox"
+                    value={employee.id}
+                    onClick={this._selectEmployeeForDeletion}
+                  />
                   <label>
                     {employee.firstName} {employee.lastName}
                   </label>
