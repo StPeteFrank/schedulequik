@@ -97,7 +97,6 @@ h3 {
   cursor: pointer;
 }
 .AddEditTabs {
-  /* background-color: rgb(26, 26, 250); */
   background-color: #2d4b9b;
   color: whitesmoke;
   display: flex;
@@ -316,6 +315,7 @@ button {
   padding: 1vh;
   width: 30vw;
 }
+
 .QuikShiftAddContainer {
   border: 1px solid black;
   border-radius: 10px;

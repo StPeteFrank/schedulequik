@@ -34,7 +34,6 @@ class Employees extends Component {
             <Link to="/addnewemployees">ADD/DELETE EMPLOYEE</Link>
           </div>
           <div className="EmployeeContainer">
-            {/* The EmployeeTable will come from EmployeesTable db (HttpGet). */}
             <table className="EmployeeTable">
               <tbody>
                 <tr>

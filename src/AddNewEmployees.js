@@ -10,6 +10,10 @@ class AddNewEmployees extends Component {
     }
   }
 
+  componentDidMount() {
+    this.loadAllEmployees()
+  }
+
   addEmployeeToApi = e => {
     e.preventDefault()
     axios
@@ -19,14 +23,20 @@ class AddNewEmployees extends Component {
         phoneNumber: this.state.phoneNumber,
         emailAddress: this.state.emailAddress
       })
-      .then(response => {
-        //TODO: redirect to /employees using react router (or vanilla js)
-      })
+      .then(this.loadAllEmployees())
   }
 
   handleChange = e => {
     this.setState({
       [e.target.name]: e.target.value
+    })
+  }
+
+  loadAllEmployees = () => {
+    axios.get('https://localhost:5001/api/employees').then(resp => {
+      this.setState({
+        allEmployees: resp.data
+      })
     })
   }
 
@@ -82,8 +92,6 @@ class AddNewEmployees extends Component {
 
             <div className="AddNewEmployeeButton">
               <button onClick={this.addEmployeeToApi}>ADD NEW EMPLOYEE</button>
-              {/* Once AddNewEmployeeButton is clicked the new employee will be saved and
-              appear on the Employees view. The user will be taken back to the Employees view page. */}
             </div>
           </section>
         </div>
@@ -91,32 +99,21 @@ class AddNewEmployees extends Component {
         <h2>Delete Employees</h2>
         <div className="DeleteEmployeeContainer">
           <section className="DeleteEmployee">
-            {/* These inputs will need to add data to EmployeesTable db (HttpPut). */}
-            {/* Then later be displayed on the Employees view (HttpGet). */}
-
             <p>Select Employee</p>
-            {/* These hard-coded Select Positions inputs will come from PositionsTable db (HttpGet). */}
-            {/* Once they are selected they will add to EmployeePositionsTable (HttpPut). */}
-            {/* {this.state.allEmployees.map(employee => {
-                  return ( */}
-            <div className="ListedPositions">
-              <input type="checkbox" /> <label>Hardcoded Harry</label>
-            </div>
-            <div className="ListedPositions">
-              <input type="checkbox" /> <label>Jane Doe</label>
-            </div>
-            <div className="ListedPositions">
-              <input type="checkbox" /> <label>Jennifer Zayne</label>
-            </div>
-            <div className="ListedPositions">
-              <input type="checkbox" /> <label>Joe Banana</label>
-            </div>
+            {this.state.allEmployees.map(employee => {
+              return (
+                <div className="ListedPositions">
+                  <input type="checkbox" />{' '}
+                  <label>
+                    {employee.firstName} {employee.lastName}
+                  </label>
+                </div>
+              )
+            })}
             <div className="AddNewEmployeeButton">
               <button onClick={this.deleteEmployeeFromApi}>
                 DELETE EMPLOYEE
               </button>
-              {/* Once AddNewEmployeeButton is clicked the new employee will be saved and
-              appear on the Employees view. The user will be taken back to the Employees view page. */}
             </div>
           </section>
         </div>
