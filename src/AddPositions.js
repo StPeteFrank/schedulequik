@@ -44,7 +44,6 @@ class AddPositions extends Component {
                 onChange={this.handleChange}
               />
               <button onClick={this.addPositionToApi}>ADD</button>
-              {/* User inputs text of new position and clicks Add button to post onto db (HttpPost). */}
               {/* Then newly put position appears under PositionsList section (httpGet). */}
             </div>
           </section>

@@ -20,6 +20,13 @@ code {
   padding: 2vh;
   color: whitesmoke;
 }
+.Home {
+  background-image: url(Images/rawpixel-714362-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: calc(100vh - 20vh);
+}
+
 .Tabs {
   display: flex;
   justify-content: space-evenly;
@@ -37,7 +44,7 @@ code {
   cursor: pointer;
 }
 h2 {
-  margin: 1vh;
+  margin: 0vh;
 }
 h3 {
   margin: 1vh;
@@ -71,6 +78,9 @@ h3 {
 .EmployeeContainer {
   margin-left: 1vw;
   margin-right: 1vw;
+}
+.EmployeeTable {
+  background-color: rgb(236, 233, 233);
 }
 .DeleteTabs {
   margin-left: 1vw;
