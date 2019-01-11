@@ -419,3 +419,6 @@ button {
   height: 4vh;
   margin: 4vh;
 }
+.DeleteCheckbox {
+  cursor: pointer;
+}

@@ -107,6 +107,7 @@ class AddPositions extends Component {
               return (
                 <div className="ListedPositions">
                   <input
+                    className="DeleteCheckbox"
                     type="checkbox"
                     value={position.id}
                     onClick={this._selectPositionForDeletion}

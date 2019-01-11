@@ -132,6 +132,7 @@ class AddNewEmployees extends Component {
               return (
                 <div className="ListedPositions">
                   <input
+                    className="DeleteCheckbox"
                     type="checkbox"
                     value={employee.id}
                     onClick={this._selectEmployeeForDeletion}
