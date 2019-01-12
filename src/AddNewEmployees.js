@@ -144,7 +144,7 @@ class AddNewEmployees extends Component {
               )
             })}
             <div className="AddNewEmployeeButton">
-              <button onClick={this.deleteEmployeeFromApi}>
+              <button onClick={this._selectEmployeeForDeletion}>
                 DELETE EMPLOYEE
               </button>
             </div>
