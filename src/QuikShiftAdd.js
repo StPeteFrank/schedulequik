@@ -30,11 +30,7 @@ class QuikShiftAdd extends Component {
           <section>
             <p>John Smith</p>
 
-            {/* "John Smith" needs to come from EmployeesTable db (HttpGet). */}
             <div className="SelectAPosition">
-              <option value="">Select a Position</option>
-
-              {/* This positions drop-down menu needs to come from PositionsTable db (HttpGet). */}
               <select onChange={this.loadAllPositions}>
                 <option value="">Select a Position</option>
                 {this.state.allPositions.map(position => {
