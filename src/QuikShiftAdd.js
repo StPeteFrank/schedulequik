@@ -21,6 +21,12 @@ class QuikShiftAdd extends Component {
     })
   }
 
+  handleDropDownChange = e => {
+    this.setState({
+      positionsTableId: e.target.value
+    })
+  }
+
   render() {
     return (
       <div>

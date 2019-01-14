@@ -103,7 +103,6 @@ class AddPositions extends Component {
                 onChange={this.handleChange}
               />
               <button onClick={this.addPositionToApi}>ADD</button>
-              {/* Then newly put position appears under PositionsList section (httpGet). */}
             </div>
           </section>
 
@@ -135,7 +134,6 @@ class AddPositions extends Component {
             <button onClick={this.deleteSelectedPositions}>
               DELETE POSITION
             </button>
-            {/* Delete Selected button takes user back to AddPositions view. */}
           </section>
         </div>
       </div>
