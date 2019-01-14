@@ -70,20 +70,20 @@ class AddPositions extends Component {
     }
   }
 
-  // deleteSelectedEmployees = () => {
-  //   // DELETE request to the API
-  //   // Update state with latest employee list
-  //   axios
-  //     .delete('https://localhost:5001/api/employees/list', {
-  //       headers: {
-  //         contentType: 'application/json'
-  //       },
-  //       data: {
-  //         employeeIds: this.state.employeeIDsSelectedForDelete
-  //       }
-  //     })
-  //     .then(() => this.loadAllEmployees())
-  // }
+  deleteSelectedPositions = () => {
+    // DELETE request to the API
+    // Update state with latest employee list
+    axios
+      .delete('https://localhost:5001/api/positions/list', {
+        headers: {
+          contentType: 'application/json'
+        },
+        data: {
+          positionIds: this.state.positionIDsSelectedForDelete
+        }
+      })
+      .then(() => this.loadAllPositions())
+  }
 
   render() {
     return (
@@ -108,15 +108,7 @@ class AddPositions extends Component {
           </section>
 
           <section className="PositionsList">
-            <div className="EditDeleteButton">
-              {/* <p>Positions</p> */}
-              {/* Edit/Delete button takes user to EditPositions view. */}
-            </div>
-            {/* <li>Hardcoded Position</li>
-            <li>Developer</li>
-            <li>Senior Developer</li>
-            <li>CTO</li> */}
-            {/* These are hard-coded and will need to get positions from db (HttpGet). */}
+            <div className="EditDeleteButton" />
           </section>
         </div>
 
@@ -140,7 +132,7 @@ class AddPositions extends Component {
           </section>
 
           <section className="DeletePositionsButtons">
-            <button onClick={this.deletePositionFromApi}>
+            <button onClick={this.deleteSelectedPositions}>
               DELETE POSITION
             </button>
             {/* Delete Selected button takes user back to AddPositions view. */}
