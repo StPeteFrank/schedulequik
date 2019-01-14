@@ -5,18 +5,27 @@ class QuikShiftAdd extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      allPositions: []
+      allPositions: [],
+      allEmployees: []
     }
   }
 
   componentDidMount() {
     this.loadAllPositions()
+    this.loadAllEmployees()
   }
 
   loadAllPositions = () => {
     axios.get('https://localhost:5001/api/positions').then(resp => {
       this.setState({
         allPositions: resp.data
+      })
+    })
+  }
+  loadAllEmployees = () => {
+    axios.get('https://localhost:5001/api/employees').then(resp => {
+      this.setState({
+        allEmployees: resp.data
       })
     })
   }
@@ -27,6 +36,12 @@ class QuikShiftAdd extends Component {
     })
   }
 
+  handleDropDownChangeEmp = e => {
+    this.setState({
+      employeesTableId: e.target.value
+    })
+  }
+
   render() {
     return (
       <div>
@@ -34,14 +49,33 @@ class QuikShiftAdd extends Component {
 
         <div className="QuikShiftAddContainer">
           <section>
-            <p>John Smith</p>
+            <p>Make Your Selections</p>
+
+            <div className="SelectAnEmployee">
+              <select
+                name="positionsTableId"
+                onChange={this.handleDropDownChangeEmp}
+              >
+                <option value="0">Select an Employee</option>
+                {this.state.allEmployees.map(employee => {
+                  return (
+                    <option value={employee.id} key={employee.id}>
+                      {employee.firstName} {employee.lastName}
+                    </option>
+                  )
+                })}
+              </select>
+            </div>
 
             <div className="SelectAPosition">
-              <select onChange={this.loadAllPositions}>
-                <option value="">Select a Position</option>
+              <select
+                name="positionsTableId"
+                onChange={this.handleDropDownChange}
+              >
+                <option value="0">Select a Position</option>
                 {this.state.allPositions.map(position => {
                   return (
-                    <option key={position.id} value={position.id}>
+                    <option value={position.id} key={position.id}>
                       {position.positionName}
                     </option>
                   )

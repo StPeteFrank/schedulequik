@@ -343,8 +343,18 @@ button {
   display: flex;
   flex-direction: column;
   text-align: left;
+  margin-bottom: 2vh;
 }
 .SelectAPosition select {
+  cursor: pointer;
+}
+.SelectAnEmployee {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 2vh;
+}
+.SelectAnEmployee select {
   cursor: pointer;
 }
 .StartEndTimeInput {
