@@ -25,13 +25,21 @@ class AddNewEmployees extends Component {
         phoneNumber: this.state.phoneNumber,
         emailAddress: this.state.emailAddress
       })
-      .then(this.loadAllEmployees())
+      .then(() => {
+        this.loadAllEmployees()
+        this.setState({
+          firstName: '',
+          lastName: '',
+          phoneNumber: '',
+          emailAddress: ''
+        })
+      })
   }
 
   deleteEmployeeFromApi = () => {
     axios
       .delete('https://localhost:5001/api/employees/firstname')
-      .then(this.loadAllEmployees())
+      .then(() => this.loadAllEmployees())
   }
 
   handleChange = e => {
@@ -68,6 +76,21 @@ class AddNewEmployees extends Component {
     }
   }
 
+  deleteSelectedEmployees = () => {
+    // DELETE request to the API
+    // Update state with latest employee list
+    axios
+      .delete('https://localhost:5001/api/employees/list', {
+        headers: {
+          contentType: 'application/json'
+        },
+        data: {
+          employeeIds: this.state.employeeIDsSelectedForDelete
+        }
+      })
+      .then(() => this.loadAllEmployees())
+  }
+
   render() {
     return (
       <div>
@@ -81,6 +104,7 @@ class AddNewEmployees extends Component {
                   type="text"
                   placeholder="Enter First Name"
                   name="firstName"
+                  value={this.state.firstName}
                   onChange={this.handleChange}
                 />
               </div>
@@ -130,7 +154,7 @@ class AddNewEmployees extends Component {
             <p>Select Employees</p>
             {this.state.allEmployees.map(employee => {
               return (
-                <div className="ListedPositions">
+                <div className="ListedPositions" key={employee.id}>
                   <input
                     className="DeleteCheckbox"
                     type="checkbox"
@@ -144,7 +168,7 @@ class AddNewEmployees extends Component {
               )
             })}
             <div className="AddNewEmployeeButton">
-              <button onClick={this._selectEmployeeForDeletion}>
+              <button onClick={this.deleteSelectedEmployees}>
                 DELETE EMPLOYEE
               </button>
             </div>
