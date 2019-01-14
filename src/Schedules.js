@@ -56,13 +56,13 @@ class Schedules extends Component {
                       <td>
                         {employee.firstName} {employee.lastName}
                       </td>
-                      <td />
-                      <td />
-                      <td />
-                      <td />
-                      <td />
-                      <td />
-                      <td />
+                      <td className="Workday" />
+                      <td className="Workday" />
+                      <td className="Workday" />
+                      <td className="Workday" />
+                      <td className="Workday" />
+                      <td className="Workday" />
+                      <td className="Workday" />
                     </tr>
                   )
                 })}
