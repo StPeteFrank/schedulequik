@@ -1,19 +1,52 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
 class QuikShiftAdd extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      allPositions: []
+    }
+  }
+
+  componentDidMount() {
+    this.loadAllPositions()
+  }
+
+  loadAllPositions = () => {
+    axios.get('https://localhost:5001/api/positions').then(resp => {
+      this.setState({
+        allPositions: resp.data
+      })
+    })
+  }
+
   render() {
     return (
       <div>
         <h2>Quik Shift Add</h2>
+
         <div className="QuikShiftAddContainer">
           <section>
             <p>John Smith</p>
+
             {/* "John Smith" needs to come from EmployeesTable db (HttpGet). */}
             <div className="SelectAPosition">
               <option value="">Select a Position</option>
+
               {/* This positions drop-down menu needs to come from PositionsTable db (HttpGet). */}
-              <select onChange="Select a Position" />
+              <select onChange={this.loadAllPositions}>
+                <option value="">Select a Position</option>
+                {this.state.allPositions.map(position => {
+                  return (
+                    <option key={position.id} value={position.id}>
+                      {position.positionName}
+                    </option>
+                  )
+                })}
+              </select>
             </div>
+
             <div className="StartEndTimeInput">
               <p>Start</p>
               <input type="text" placeholder="In Time" />
