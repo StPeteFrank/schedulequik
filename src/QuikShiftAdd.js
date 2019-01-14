@@ -45,7 +45,7 @@ class QuikShiftAdd extends Component {
   render() {
     return (
       <div>
-        <h2>Quik Shift Add/Edit</h2>
+        <h2>Quik Shift Add/Edit/Delete</h2>
 
         <div className="QuikShiftAddContainer">
           <section>
@@ -84,21 +84,21 @@ class QuikShiftAdd extends Component {
             </div>
 
             <div className="StartEndTimeInput">
-              <p>Start</p>
+              <p>Input Start Date and Time</p>
               <input
                 type="datetime-local"
                 placeholder="In Time"
                 name="InTime"
                 value={this.state.InTime}
-                onChange={this.handleChange}
+                onChange={this.handleChangeIn}
               />
-              <p>Finish</p>
+              <p>Input Finish Date and Time</p>
               <input
                 type="datetime-local"
                 placeholder="Out Time"
                 name="OutTime"
                 value={this.state.OutTime}
-                onChange={this.handleChange}
+                onChange={this.handleChangeOut}
               />
             </div>
 
