@@ -30,7 +30,7 @@ class QuikShiftAdd extends Component {
     })
   }
 
-  handleDropDownChange = e => {
+  handleDropDownChangePos = e => {
     this.setState({
       positionsTableId: e.target.value
     })
@@ -56,7 +56,7 @@ class QuikShiftAdd extends Component {
                 name="positionsTableId"
                 onChange={this.handleDropDownChangeEmp}
               >
-                <option value="0">Select an Employee</option>
+                <option value="0">Select Employee</option>
                 {this.state.allEmployees.map(employee => {
                   return (
                     <option value={employee.id} key={employee.id}>
@@ -70,9 +70,9 @@ class QuikShiftAdd extends Component {
             <div className="SelectAPosition">
               <select
                 name="positionsTableId"
-                onChange={this.handleDropDownChange}
+                onChange={this.handleDropDownChangePos}
               >
-                <option value="0">Select a Position</option>
+                <option value="0">Select Position</option>
                 {this.state.allPositions.map(position => {
                   return (
                     <option value={position.id} key={position.id}>
@@ -85,15 +85,24 @@ class QuikShiftAdd extends Component {
 
             <div className="StartEndTimeInput">
               <p>Start</p>
-              <input type="text" placeholder="In Time" />
+              <input
+                type="datetime-local"
+                placeholder="In Time"
+                name="InTime"
+                value={this.state.InTime}
+                onChange={this.handleChange}
+              />
               <p>Finish</p>
-              <input type="text" placeholder="Out Time" />
-              {/* These inputed In/Out Times will display on the schedule. */}
+              <input
+                type="datetime-local"
+                placeholder="Out Time"
+                name="OutTime"
+                value={this.state.OutTime}
+                onChange={this.handleChange}
+              />
             </div>
 
-            <div className="ApplyToDaysInput">
-              {/* This Apply to Days option will allow the user to populate multiple day with 
-            positions and in/out times. */}
+            {/* <div className="ApplyToDaysInput">
               <p>Apply to Days</p>
               <div className="QuikShiftAddDaysInput">
                 <input type="checkbox" /> <label>Monday</label>
@@ -116,7 +125,7 @@ class QuikShiftAdd extends Component {
               <div className="ListedPositions">
                 <input type="checkbox" /> <label>Sunday</label>
               </div>
-            </div>
+            </div> */}
             <div className="QuikShiftAddButtons">
               <button>ADD SHIFT</button>
               {/* Adds position, time, and days selected to the Schedules view. */}
