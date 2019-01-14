@@ -1,7 +1,26 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-
+import axios from 'axios'
 class Schedules extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      allEmployees: []
+    }
+  }
+
+  componentDidMount() {
+    this.loadAllEmployees()
+  }
+
+  loadAllEmployees = () => {
+    axios.get('https://localhost:5001/api/employees').then(resp => {
+      this.setState({
+        allEmployees: resp.data
+      })
+    })
+  }
+
   render() {
     return (
       <div>
@@ -31,39 +50,22 @@ class Schedules extends Component {
                   <th>Jan-26 Sat</th>
                   <th>Jan-27 Sun</th>
                 </tr>
-                <tr>
-                  {/* The names of employees needs to come from the EmployeesTable db (HttpGet). */}
-                  <td>John Smith</td>
-                  <td>
-                    9am-5pm<p>Office Manager</p>
-                  </td>
-                  <td href="#" />
-                  <td href="#" />
-                  <td href="#" />
-                  <td href="#" />
-                  <td href="#" />
-                  <td href="#" />
-                </tr>
-                <tr>
-                  <td>Ana Banana</td>
-                  <td href="#" />
-                  <td href="#" />
-                  <td href="#" />
-                  <td href="#" />
-                  <td href="#" />
-                  <td href="#" />
-                  <td href="#" />
-                </tr>
-                <tr>
-                  <td>Jennifer Zayne</td>
-                  <td href="#" />
-                  <td href="#" />
-                  <td href="#" />
-                  <td href="#" />
-                  <td href="#" />
-                  <td href="#" />
-                  <td href="#" />
-                </tr>
+                {this.state.allEmployees.map(employee => {
+                  return (
+                    <tr>
+                      <td>
+                        {employee.firstName} {employee.lastName}
+                      </td>
+                      <td />
+                      <td />
+                      <td />
+                      <td />
+                      <td />
+                      <td />
+                      <td />
+                    </tr>
+                  )
+                })}
               </tbody>
             </table>
           </div>

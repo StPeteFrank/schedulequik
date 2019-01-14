@@ -25,6 +25,8 @@ code {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: calc(100vh - 20vh);
+  /* max-width: 100%;
+  height: auto; */
 }
 
 .Tabs {
