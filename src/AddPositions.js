@@ -22,7 +22,12 @@ class AddPositions extends Component {
       .post('https://localhost:5001/api/positions', {
         PositionName: this.state.positionName
       })
-      .then(this.loadAllPositions())
+      .then(() => {
+        this.loadAllPositions()
+        this.setState({
+          positionName: ''
+        })
+      })
   }
 
   deletePositionFromApi = () => {
@@ -65,6 +70,21 @@ class AddPositions extends Component {
     }
   }
 
+  // deleteSelectedEmployees = () => {
+  //   // DELETE request to the API
+  //   // Update state with latest employee list
+  //   axios
+  //     .delete('https://localhost:5001/api/employees/list', {
+  //       headers: {
+  //         contentType: 'application/json'
+  //       },
+  //       data: {
+  //         employeeIds: this.state.employeeIDsSelectedForDelete
+  //       }
+  //     })
+  //     .then(() => this.loadAllEmployees())
+  // }
+
   render() {
     return (
       <div>
@@ -79,6 +99,7 @@ class AddPositions extends Component {
                 type="text"
                 placeholder="Enter Position"
                 name="positionName"
+                value={this.state.positionName}
                 onChange={this.handleChange}
               />
               <button onClick={this.addPositionToApi}>ADD</button>

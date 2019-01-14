@@ -113,6 +113,7 @@ class AddNewEmployees extends Component {
                   type="text"
                   placeholder="Enter Last Name"
                   name="lastName"
+                  value={this.state.lastName}
                   onChange={this.handleChange}
                 />
               </div>
@@ -126,6 +127,7 @@ class AddNewEmployees extends Component {
                 type="text"
                 placeholder="Enter Phone Number"
                 name="phoneNumber"
+                value={this.state.phoneNumber}
                 onChange={this.handleChange}
               />
             </div>
@@ -138,6 +140,7 @@ class AddNewEmployees extends Component {
                 type="text"
                 placeholder="Enter Email Address"
                 name="emailAddress"
+                value={this.state.emailAddress}
                 onChange={this.handleChange}
               />
             </div>
