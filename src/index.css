@@ -321,7 +321,7 @@ button {
   border: 1px solid black;
   border-radius: 10px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   background-color: rgb(173, 169, 169);
   margin-left: 10vw;
   margin-right: 10vw;
@@ -330,13 +330,13 @@ button {
   border-radius: 4px;
   margin: 1vw;
   background-image: linear-gradient(rgb(94, 227, 250), rgb(37, 76, 150));
-  width: 20vw;
+  width: 25vw;
   height: 4vh;
 }
 .QuikShiftAddButtons {
   display: flex;
   justify-content: left;
-  flex-direction: row;
+  flex-direction: column;
   margin: 6vh;
 }
 .SelectAPosition {
