@@ -304,7 +304,8 @@ button {
 .InputName {
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
+  flex-direction: column;
+  margin-bottom: 3vh;
 }
 .DeleteEmployee button {
   display: flex;

@@ -108,6 +108,7 @@ class AddNewEmployees extends Component {
                   onChange={this.handleChange}
                 />
               </div>
+              <div className="InputName" />
               <div>
                 <input
                   type="text"
