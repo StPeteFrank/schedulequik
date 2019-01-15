@@ -280,7 +280,7 @@ button {
   margin-bottom: 3vh;
   background-image: linear-gradient(rgb(94, 227, 250), rgb(37, 76, 150));
   padding: 1vh;
-  width: 30vw;
+  width: 20vw;
 }
 .DeleteEmployeeContainer {
   border: 1px solid black;
@@ -315,7 +315,7 @@ button {
   margin-bottom: 3vh;
   background-image: linear-gradient(rgb(94, 227, 250), rgb(37, 76, 150));
   padding: 1vh;
-  width: 30vw;
+  width: 20vw;
 }
 
 .QuikShiftAddContainer {
