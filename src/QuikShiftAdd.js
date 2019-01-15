@@ -1,18 +1,21 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 class QuikShiftAdd extends Component {
   constructor(props) {
     super(props)
     this.state = {
       allPositions: [],
-      allEmployees: []
+      allEmployees: [],
+      allShifts: []
     }
   }
 
   componentDidMount() {
     this.loadAllPositions()
     this.loadAllEmployees()
+    this.loadAllShifts()
   }
 
   loadAllPositions = () => {
@@ -29,6 +32,34 @@ class QuikShiftAdd extends Component {
       })
     })
   }
+  loadAllShifts = () => {
+    axios.get('https://localhost:5001/api/shifts').then(resp => {
+      this.setState({
+        allShifts: resp.data
+      })
+    })
+  }
+
+  //////////////////////////////
+
+  addShiftToApi = e => {
+    e.preventDefault()
+    axios
+      .post('https://localhost:5001/api/shifts', {
+        inTime: this.state.inTime,
+        outTime: this.state.outTime,
+        positionName: this.state.positionName
+      })
+      .then(() => {
+        this.loadAllShifts()
+        this.setState({
+          inTime: '',
+          outTime: '',
+          positionName: ''
+        })
+      })
+  }
+  ///////////////////////////////
 
   handleDropDownChangePos = e => {
     this.setState({
@@ -39,6 +70,16 @@ class QuikShiftAdd extends Component {
   handleDropDownChangeEmp = e => {
     this.setState({
       employeesTableId: e.target.value
+    })
+  }
+  handleChangeIn = e => {
+    this.setState({
+      shiftsTableId: e.target.value
+    })
+  }
+  handleChangeOut = e => {
+    this.setState({
+      shiftsTableId: e.target.value
     })
   }
 
@@ -127,8 +168,10 @@ class QuikShiftAdd extends Component {
               </div>
             </div> */}
             <div className="QuikShiftAddButtons">
-              <button>ADD SHIFT</button>
-              <button>CANCEL</button>
+              <button onClick={this.addShiftToApi}>ADD SHIFT</button>
+              <div className="LinkBackButtons">
+                <Link to="/schedules">CANCEL</Link>
+              </div>
               <button>DELETE SHIFT</button>
             </div>
           </section>

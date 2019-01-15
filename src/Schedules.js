@@ -30,7 +30,13 @@ class Schedules extends Component {
       })
     })
   }
+  //   displayShiftData = () => {
+  //     axios.get('https://localhost:5001/api/shifts').then(resp => {
+  //     this.setState({
 
+  //     })
+  //   }
+  // }
   doesEmployeeHaveShift = (employeeId, date) => {
     let rv = 'no'
     // check each shift, and if that shift.employeeid == employeeid, return yes,
@@ -67,8 +73,6 @@ class Schedules extends Component {
             <table className="ScheduleTable">
               <tbody>
                 <tr>
-                  <th> </th>
-
                   {/* Hard-coded but would be great to add a feature that keeps track of what week it is. */}
                   <th>Jan-21 Mon</th>
                   <th>Jan-22 Tue</th>
