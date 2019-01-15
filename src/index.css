@@ -354,6 +354,7 @@ button {
   justify-content: center;
   align-items: center;
   border-radius: 4px;
+  border: 0.5px whitesmoke solid;
   margin: 1vw;
   background-image: linear-gradient(rgb(94, 227, 250), rgb(37, 76, 150));
   width: 25vw;
