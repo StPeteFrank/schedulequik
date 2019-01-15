@@ -117,7 +117,7 @@ class AddPositions extends Component {
             <p>Select Positions</p>
             {this.state.allPositions.map(position => {
               return (
-                <div className="ListedPositions">
+                <div className="ListedPositions" key={position.id}>
                   <input
                     className="DeleteCheckbox"
                     type="checkbox"
