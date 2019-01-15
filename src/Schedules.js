@@ -63,6 +63,7 @@ class Schedules extends Component {
             <table className="ScheduleTable">
               <tbody>
                 <tr>
+                  <th />
                   {/* Hard-coded but would be great to add a feature that keeps track of what week it is. */}
                   <th>Jan-21 Mon</th>
                   <th>Jan-22 Tue</th>

@@ -43,18 +43,18 @@ class QuikShiftAdd extends Component {
     e.preventDefault()
     axios
       .post('https://localhost:5001/api/shifts', {
-        positionsTableId: this.state.positionsTableId,
-        employeesTableId: this.state.employeesTableId,
         inTime: this.state.inTime,
-        outTime: this.state.outTime
+        outTime: this.state.outTime,
+        employeesTableId: this.state.employeesTableId,
+        positionsTableId: this.state.positionsTableId
       })
       .then(() => {
         this.loadAllShifts()
         this.setState({
-          employeesTableId: '',
-          positionsTableId: '',
           inTime: '',
-          outTime: ''
+          outTime: '',
+          employeesTableId: '',
+          positionsTableId: ''
         })
       })
   }
@@ -63,7 +63,6 @@ class QuikShiftAdd extends Component {
       positionsTableId: e.target.value
     })
   }
-
   handleDropDownChangeEmp = e => {
     this.setState({
       employeesTableId: e.target.value
@@ -127,7 +126,7 @@ class QuikShiftAdd extends Component {
                 type="datetime-local"
                 placeholder="In Time"
                 name="InTime"
-                value={this.state.InTime}
+                value={this.state.inTime}
                 onChange={this.handleChangeIn}
               />
               <p>Input Finish Date and Time</p>
@@ -135,12 +134,41 @@ class QuikShiftAdd extends Component {
                 type="datetime-local"
                 placeholder="Out Time"
                 name="OutTime"
-                value={this.state.OutTime}
+                value={this.state.outTime}
                 onChange={this.handleChangeOut}
               />
             </div>
+            <div className="QuikShiftAddButtons">
+              <button onClick={this.addShiftToApi}>ADD SHIFT</button>
+              <div className="LinkBackButtons">
+                <Link to="/schedules">CANCEL</Link>
+              </div>
+              <button>DELETE SHIFT</button>
+            </div>
+          </section>
+        </div>
 
-            {/* <div className="ApplyToDaysInput">
+        <div>
+          <h2>Delete Schedule</h2>
+          <div className="ClearDeleteContainer">
+            <section>
+              <p>Delete Entire Current Week's Schedule?</p>
+            </section>
+
+            <section className="ClearDeleteButtons">
+              <button>DELETE</button>
+            </section>
+          </div>
+        </div>
+      </div>
+    )
+  }
+}
+
+export default QuikShiftAdd
+
+{
+  /* <div className="ApplyToDaysInput">
               <p>Apply to Days</p>
               <div className="QuikShiftAddDaysInput">
                 <input type="checkbox" /> <label>Monday</label>
@@ -163,54 +191,5 @@ class QuikShiftAdd extends Component {
               <div className="ListedPositions">
                 <input type="checkbox" /> <label>Sunday</label>
               </div>
-            </div> */}
-            <div className="QuikShiftAddButtons">
-              <button onClick={this.addShiftToApi}>ADD SHIFT</button>
-              <div className="LinkBackButtons">
-                <Link to="/schedules">CANCEL</Link>
-              </div>
-              <button>DELETE SHIFT</button>
-            </div>
-          </section>
-        </div>
-        {/* <div>
-          <h2>Quik Shift Edit</h2>
-          <div className="QuikShiftEditContainer">
-            <section>
-              <p>John Smith</p>
-              <div className="PositionSelector">
-                <option value="">Position</option>
-                <select onChange="Select a Position" />
-              </div>
-              <div className="StartEndTimeInput">
-                <p>Start</p>
-                <input type="text" placeholder="In Time" />
-                <p>Finish</p>
-                <input type="text" placeholder="Out Time" />
-              </div>
-              <div className="QuikShiftEditButtons">
-                <button>SAVE SHIFT</button>
-                <button>DELETE SHIFT</button>
-                <button>CANCEL</button>
-              </div>
-            </section>
-          </div>
-        </div> */}
-        <div>
-          <h2>Delete Schedule</h2>
-          <div className="ClearDeleteContainer">
-            <section>
-              <p>Delete Entire Current Week's Schedule?</p>
-            </section>
-
-            <section className="ClearDeleteButtons">
-              <button>DELETE</button>
-            </section>
-          </div>
-        </div>
-      </div>
-    )
-  }
+            </div> */
 }
-
-export default QuikShiftAdd
