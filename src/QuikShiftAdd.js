@@ -39,28 +39,25 @@ class QuikShiftAdd extends Component {
       })
     })
   }
-
-  //////////////////////////////
-
   addShiftToApi = e => {
     e.preventDefault()
     axios
       .post('https://localhost:5001/api/shifts', {
+        positionsTableId: this.state.positionsTableId,
+        employeesTableId: this.state.employeesTableId,
         inTime: this.state.inTime,
-        outTime: this.state.outTime,
-        positionName: this.state.positionName
+        outTime: this.state.outTime
       })
       .then(() => {
         this.loadAllShifts()
         this.setState({
+          employeesTableId: '',
+          positionsTableId: '',
           inTime: '',
-          outTime: '',
-          positionName: ''
+          outTime: ''
         })
       })
   }
-  ///////////////////////////////
-
   handleDropDownChangePos = e => {
     this.setState({
       positionsTableId: e.target.value

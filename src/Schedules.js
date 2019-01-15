@@ -30,13 +30,6 @@ class Schedules extends Component {
       })
     })
   }
-  //   displayShiftData = () => {
-  //     axios.get('https://localhost:5001/api/shifts').then(resp => {
-  //     this.setState({
-
-  //     })
-  //   }
-  // }
   doesEmployeeHaveShift = (employeeId, date) => {
     let rv = 'no'
     // check each shift, and if that shift.employeeid == employeeid, return yes,
@@ -64,12 +57,9 @@ class Schedules extends Component {
             <h4>Click on any day to add, edit, or delete shifts.</h4>
           </div>
           <div className="DeleteTabs">
-            {/* This DeleteTabs will take user to the ClearDelete view. */}
             <Link to="/quikshiftadd">ADD/ EDIT/ DELETE</Link>
           </div>
           <div className="ScheduleContainer">
-            {/* When user selects an empty cell from the Schedules view they will taken to the QuikShiftAdd view. */}
-            {/* If they select a cell that already has a shift they will be taken to the QuikShiftEdit view. */}
             <table className="ScheduleTable">
               <tbody>
                 <tr>
@@ -136,22 +126,17 @@ class Schedules extends Component {
               </tbody>
             </table>
           </div>
-          <div>
+          {/* <div>
             {this.state.allShifts.map(shift => {
               return (
                 <ul>
-                  {/* <li>{shift.id}</li> */}
                   <li>{shift.inTime}</li>
                   <li>{shift.outTime}</li>
-                  {/* <li>{shift.employees}</li>
-                  <li>{shift.employeesTableId}</li> */}
-                  {/* <li>{shift.employeesTableId}</li>
-                  <li>{shift.positionsTableId}</li> */}
                   <li>{shift.positions.positionName}</li>
                 </ul>
               )
             })}
-          </div>
+          </div> */}
         </div>
       </div>
     )
