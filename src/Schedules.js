@@ -5,12 +5,14 @@ class Schedules extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      allEmployees: []
+      allEmployees: [],
+      allShifts: []
     }
   }
 
   componentDidMount() {
     this.loadAllEmployees()
+    this.loadAllShifts()
   }
 
   loadAllEmployees = () => {
@@ -19,6 +21,31 @@ class Schedules extends Component {
         allEmployees: resp.data
       })
     })
+  }
+
+  loadAllShifts = () => {
+    axios.get('https://localhost:5001/api/shifts').then(resp => {
+      this.setState({
+        allShifts: resp.data
+      })
+    })
+  }
+
+  doesEmployeeHaveShift = (employeeId, date) => {
+    let rv = 'no'
+    // check each shift, and if that shift.employeeid == employeeid, return yes,
+    for (let i = 0; i < this.state.allShifts.length; i++) {
+      const shift = this.state.allShifts[i]
+      if (shift.employeesTableId === employeeId) {
+        // check if the the current shift is on the date passed
+        if (date.toDateString() === new Date(shift.inTime).toDateString()) {
+          // TODO : create and return a component that is responsible  for displaying the shift data
+          return shift.positions.positionName
+        }
+      }
+    }
+    //else return no
+    return rv
   }
 
   render() {
@@ -40,7 +67,8 @@ class Schedules extends Component {
             <table className="ScheduleTable">
               <tbody>
                 <tr>
-                  <th />
+                  <th> </th>
+
                   {/* Hard-coded but would be great to add a feature that keeps track of what week it is. */}
                   <th>Jan-21 Mon</th>
                   <th>Jan-22 Tue</th>
@@ -56,18 +84,69 @@ class Schedules extends Component {
                       <td>
                         {employee.firstName} {employee.lastName}
                       </td>
-                      <td className="Workday" />
-                      <td className="Workday" />
-                      <td className="Workday" />
-                      <td className="Workday" />
-                      <td className="Workday" />
-                      <td className="Workday" />
-                      <td className="Workday" />
+                      <td className="Workday">
+                        {this.doesEmployeeHaveShift(
+                          employee.id,
+                          new Date(2019, 0, 21)
+                        )}
+                      </td>
+                      <td className="Workday">
+                        {this.doesEmployeeHaveShift(
+                          employee.id,
+                          new Date(2019, 0, 22)
+                        )}
+                      </td>
+                      <td className="Workday">
+                        {this.doesEmployeeHaveShift(
+                          employee.id,
+                          new Date(2019, 0, 23)
+                        )}
+                      </td>
+                      <td className="Workday">
+                        {this.doesEmployeeHaveShift(
+                          employee.id,
+                          new Date(2019, 0, 24)
+                        )}
+                      </td>
+                      <td className="Workday">
+                        {this.doesEmployeeHaveShift(
+                          employee.id,
+                          new Date(2019, 0, 25)
+                        )}
+                      </td>
+                      <td className="Workday">
+                        {this.doesEmployeeHaveShift(
+                          employee.id,
+                          new Date(2019, 0, 26)
+                        )}
+                      </td>
+                      <td className="Workday">
+                        {this.doesEmployeeHaveShift(
+                          employee.id,
+                          new Date(2019, 0, 27)
+                        )}
+                      </td>
                     </tr>
                   )
                 })}
               </tbody>
             </table>
+          </div>
+          <div>
+            {this.state.allShifts.map(shift => {
+              return (
+                <ul>
+                  {/* <li>{shift.id}</li> */}
+                  <li>{shift.inTime}</li>
+                  <li>{shift.outTime}</li>
+                  {/* <li>{shift.employees}</li>
+                  <li>{shift.employeesTableId}</li> */}
+                  {/* <li>{shift.employeesTableId}</li>
+                  <li>{shift.positionsTableId}</li> */}
+                  <li>{shift.positions.positionName}</li>
+                </ul>
+              )
+            })}
           </div>
         </div>
       </div>
