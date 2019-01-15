@@ -282,6 +282,11 @@ button {
   padding: 1vh;
   width: 20vw;
 }
+.AddNewEmployeeButton {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
 .DeleteEmployeeContainer {
   border: 1px solid black;
   border-radius: 10px;
