@@ -14,7 +14,6 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          {/* This Header and Tabs will be on every view of this app. It serves as directory. */}
           <div className="Header">
             <h1>ScheduleQuik</h1>
           </div>

@@ -31,7 +31,7 @@ class Employees extends Component {
             <h3>Employee List</h3>
           </div>
           <div className="AddEditTabs">
-            <Link to="/addnewemployees">ADD/DELETE EMPLOYEE</Link>
+            <Link to="/addnewemployees">ADD / DELETE EMPLOYEES</Link>
           </div>
           <div className="EmployeeContainer">
             <table className="EmployeeTable">

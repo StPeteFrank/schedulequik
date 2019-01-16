@@ -31,7 +31,7 @@ class Positions extends Component {
             <h3>Position List</h3>
           </div>
           <div className="AddEditTabs">
-            <Link to="/addpositions">ADD/DELETE POSITIONS</Link>
+            <Link to="/addpositions">ADD / DELETE POSITIONS</Link>
           </div>
           <div className="EmployeeContainer">
             {/* The EmployeeTable will come from EmployeesTable db (HttpGet). */}

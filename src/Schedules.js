@@ -52,7 +52,6 @@ class Schedules extends Component {
     //else return no
     return rv
   }
-
   render() {
     return (
       <div>
@@ -63,7 +62,7 @@ class Schedules extends Component {
             <h4>Click on any day to add, edit, or delete shifts.</h4>
           </div>
           <div className="DeleteTabs">
-            <Link to="/quikshiftadd">ADD/ EDIT/ DELETE</Link>
+            <Link to="/quikshiftadd">ADD / EDIT / DELETE SHIFTS</Link>
           </div>
           <div className="ScheduleContainer">
             <table className="ScheduleTable">

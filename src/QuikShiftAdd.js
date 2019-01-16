@@ -160,7 +160,7 @@ class QuikShiftAdd extends Component {
             </section>
 
             <section className="ClearDeleteButtons">
-              <button>DELETE</button>
+              <button>DELETE SCHEDULE</button>
             </section>
           </div>
         </div>
