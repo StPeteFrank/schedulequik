@@ -59,6 +59,7 @@ class QuikShiftAdd extends Component {
           positionsTableId: 0
         })
       })
+    window.location = '/schedules'
   }
   handleDropDownChangePos = e => {
     this.setState({
