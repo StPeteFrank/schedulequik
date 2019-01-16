@@ -33,7 +33,11 @@ class Schedules extends Component {
     })
   }
   doesEmployeeHaveShift = (employeeId, date) => {
-    let rv = 'OFF'
+    let rv = (
+      <Link className="OffCells" to="/quikshiftadd">
+        OFF
+      </Link>
+    )
     // check each shift, and if that shift.employeeid == employeeid, return yes,
     for (let i = 0; i < this.state.allShifts.length; i++) {
       const shift = this.state.allShifts[i]

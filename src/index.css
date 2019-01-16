@@ -482,3 +482,10 @@ h2 {
   text-decoration: none;
   color: black;
 }
+.OffCells {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  font-size: 1.75vh;
+  font-size: 1.75vw;
+}
