@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import axios from 'axios'
+import ScheduleCell from './Components/ScheduleCell'
+
 class Schedules extends Component {
   constructor(props) {
     super(props)
@@ -31,7 +33,7 @@ class Schedules extends Component {
     })
   }
   doesEmployeeHaveShift = (employeeId, date) => {
-    let rv = 'no'
+    let rv = 'off'
     // check each shift, and if that shift.employeeid == employeeid, return yes,
     for (let i = 0; i < this.state.allShifts.length; i++) {
       const shift = this.state.allShifts[i]
@@ -39,7 +41,7 @@ class Schedules extends Component {
         // check if the the current shift is on the date passed
         if (date.toDateString() === new Date(shift.inTime).toDateString()) {
           // TODO : create and return a component that is responsible  for displaying the shift data
-          return shift.positions.positionName
+          return <ScheduleCell shift={shift} />
         }
       }
     }
@@ -127,7 +129,7 @@ class Schedules extends Component {
               </tbody>
             </table>
           </div>
-          {/* <div>
+          <div>
             {this.state.allShifts.map(shift => {
               return (
                 <ul>
@@ -137,7 +139,7 @@ class Schedules extends Component {
                 </ul>
               )
             })}
-          </div> */}
+          </div>
         </div>
       </div>
     )

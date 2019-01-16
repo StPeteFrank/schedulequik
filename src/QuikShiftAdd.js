@@ -8,7 +8,9 @@ class QuikShiftAdd extends Component {
     this.state = {
       allPositions: [],
       allEmployees: [],
-      allShifts: []
+      allShifts: [],
+      employeesTableId: 0,
+      positionsTableId: 0
     }
   }
 
@@ -53,8 +55,8 @@ class QuikShiftAdd extends Component {
         this.setState({
           inTime: '',
           outTime: '',
-          employeesTableId: '',
-          positionsTableId: ''
+          employeesTableId: 0,
+          positionsTableId: 0
         })
       })
   }
@@ -70,12 +72,12 @@ class QuikShiftAdd extends Component {
   }
   handleChangeIn = e => {
     this.setState({
-      shiftsTableId: e.target.value
+      inTime: e.target.value
     })
   }
   handleChangeOut = e => {
     this.setState({
-      shiftsTableId: e.target.value
+      outTime: e.target.value
     })
   }
 
@@ -92,6 +94,7 @@ class QuikShiftAdd extends Component {
               <select
                 name="positionsTableId"
                 onChange={this.handleDropDownChangeEmp}
+                value={this.state.employeesTableId}
               >
                 <option value="0">Select Employee</option>
                 {this.state.allEmployees.map(employee => {
@@ -108,6 +111,7 @@ class QuikShiftAdd extends Component {
               <select
                 name="positionsTableId"
                 onChange={this.handleDropDownChangePos}
+                value={this.state.positionsTableId}
               >
                 <option value="0">Select Position</option>
                 {this.state.allPositions.map(position => {
@@ -124,7 +128,6 @@ class QuikShiftAdd extends Component {
               <p>Input Start Date and Time</p>
               <input
                 type="datetime-local"
-                placeholder="In Time"
                 name="InTime"
                 value={this.state.inTime}
                 onChange={this.handleChangeIn}
@@ -132,7 +135,6 @@ class QuikShiftAdd extends Component {
               <p>Input Finish Date and Time</p>
               <input
                 type="datetime-local"
-                placeholder="Out Time"
                 name="OutTime"
                 value={this.state.outTime}
                 onChange={this.handleChangeOut}
