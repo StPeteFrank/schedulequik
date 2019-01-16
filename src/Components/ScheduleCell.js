@@ -5,8 +5,20 @@ class ScheduleCell extends Component {
     console.log(this.props)
     return (
       <div>
-        {this.props.shift.inTime} {this.props.shift.outTime}{' '}
-        {this.props.shift.positions.positionName}
+        <li>
+          {new Date(this.props.shift.inTime).toLocaleTimeString([], {
+            hour: '2-digit',
+            minute: '2-digit'
+          })}
+          -
+        </li>
+        <li>
+          {new Date(this.props.shift.outTime).toLocaleTimeString([], {
+            hour: '2-digit',
+            minute: '2-digit'
+          })}
+        </li>
+        <li>{this.props.shift.positions.positionName}</li>
       </div>
     )
   }

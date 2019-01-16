@@ -33,7 +33,7 @@ class Schedules extends Component {
     })
   }
   doesEmployeeHaveShift = (employeeId, date) => {
-    let rv = 'off'
+    let rv = 'OFF'
     // check each shift, and if that shift.employeeid == employeeid, return yes,
     for (let i = 0; i < this.state.allShifts.length; i++) {
       const shift = this.state.allShifts[i]
@@ -67,13 +67,13 @@ class Schedules extends Component {
                 <tr>
                   <th />
                   {/* Hard-coded but would be great to add a feature that keeps track of what week it is. */}
-                  <th>Jan-21 Mon</th>
-                  <th>Jan-22 Tue</th>
-                  <th>Jan-23 Wed</th>
-                  <th>Jan-24 Thu</th>
-                  <th>Jan-25 Fri</th>
-                  <th>Jan-26 Sat</th>
-                  <th>Jan-27 Sun</th>
+                  <th>Mon Jan-21</th>
+                  <th>Tue Jan-22</th>
+                  <th>Wed Jan-23</th>
+                  <th>Thu Jan-24</th>
+                  <th>Fri Jan-25</th>
+                  <th>Sat Jan-26</th>
+                  <th>Sun Jan-27</th>
                 </tr>
                 {this.state.allEmployees.map(employee => {
                   return (

@@ -8,7 +8,6 @@ import AddNewEmployees from './AddNewEmployees'
 import QuikShiftAdd from './QuikShiftAdd'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import Positions from './Positions'
-// import axios from 'axios'
 
 class App extends Component {
   render() {
