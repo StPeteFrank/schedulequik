@@ -34,6 +34,7 @@ class AddNewEmployees extends Component {
           emailAddress: ''
         })
       })
+    window.location = '/employees'
   }
 
   deleteEmployeeFromApi = () => {
@@ -89,6 +90,7 @@ class AddNewEmployees extends Component {
         }
       })
       .then(() => this.loadAllEmployees())
+    window.location = '/employees'
   }
 
   render() {
