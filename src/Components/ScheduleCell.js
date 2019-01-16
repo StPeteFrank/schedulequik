@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 class ScheduleCell extends Component {
   render() {
     console.log(this.props)
     return (
-      <div>
+      <Link className="ScheduleCells" to="/quikshiftadd">
         <li>
           {new Date(this.props.shift.inTime).toLocaleTimeString([], {
             hour: '2-digit',
@@ -19,7 +20,7 @@ class ScheduleCell extends Component {
           })}
         </li>
         <li>{this.props.shift.positions.positionName}</li>
-      </div>
+      </Link>
     )
   }
 }

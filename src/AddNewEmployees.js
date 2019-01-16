@@ -26,15 +26,8 @@ class AddNewEmployees extends Component {
         emailAddress: this.state.emailAddress
       })
       .then(() => {
-        this.loadAllEmployees()
-        this.setState({
-          firstName: '',
-          lastName: '',
-          phoneNumber: '',
-          emailAddress: ''
-        })
+        window.location = '/employees'
       })
-    window.location = '/employees'
   }
 
   deleteEmployeeFromApi = () => {

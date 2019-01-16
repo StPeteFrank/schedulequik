@@ -23,12 +23,8 @@ class AddPositions extends Component {
         PositionName: this.state.positionName
       })
       .then(() => {
-        this.loadAllPositions()
-        this.setState({
-          positionName: ''
-        })
+        window.location = '/positions'
       })
-    window.location = '/positions'
   }
 
   deletePositionFromApi = () => {

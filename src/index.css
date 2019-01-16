@@ -471,8 +471,14 @@ button {
 }
 .Workday {
   cursor: pointer;
+  text-decoration: none;
 }
 h2 {
   margin-top: 1vh;
   margin-bottom: 1vh;
+}
+.ScheduleCells {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
 }
