@@ -1,16 +1,30 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 class QuikShiftAdd extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      allPositions: [],
-      allEmployees: [],
-      allShifts: [],
-      employeesTableId: 0,
-      positionsTableId: 0
+    if (
+      this.props.location &&
+      this.props.location.state &&
+      this.props.location.state.shift
+    ) {
+      this.state = {
+        inTime: this.props.location.state.shift.inTime,
+        outTime: this.props.location.state.shift.outTime,
+        employeesTableId: this.props.location.state.shift.employeesTableId,
+        positionsTableId: this.props.location.state.shift.positionsTableId,
+        allEmployees: [],
+        allPositions: []
+      }
+    } else {
+      this.state = {
+        allPositions: [],
+        allEmployees: [],
+        allShifts: [],
+        employeesTableId: 0,
+        positionsTableId: 0
+      }
     }
   }
 
@@ -43,6 +57,8 @@ class QuikShiftAdd extends Component {
   }
   addShiftToApi = e => {
     e.preventDefault()
+    // if(shift already exists, then update else create)
+
     axios
       .post('https://localhost:5001/api/shifts', {
         inTime: this.state.inTime,

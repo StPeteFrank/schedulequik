@@ -5,7 +5,11 @@ class ScheduleCell extends Component {
   render() {
     console.log(this.props)
     return (
-      <Link className="ScheduleCells" to="/quikshiftadd">
+      <Link
+        className="ScheduleCells"
+        to={{ pathname: '/quikshiftadd', state: { shift: this.props.shift } }}
+      >
+        {/* <Link className="ScheduleCells" to="/quikshiftadd"> */}
         <li>
           {new Date(this.props.shift.inTime).toLocaleTimeString([], {
             hour: '2-digit',

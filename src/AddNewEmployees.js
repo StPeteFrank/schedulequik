@@ -85,6 +85,9 @@ class AddNewEmployees extends Component {
       .then(() => this.loadAllEmployees())
     window.location = '/employees'
   }
+  cancelButton = () => {
+    window.location = '/employees'
+  }
 
   render() {
     return (
@@ -142,7 +145,8 @@ class AddNewEmployees extends Component {
             </div>
 
             <div className="AddNewEmployeeButton">
-              <button onClick={this.addEmployeeToApi}>ADD NEW EMPLOYEE</button>
+              <button onClick={this.addEmployeeToApi}>ADD EMPLOYEE</button>
+              <button onClick={this.cancelButton}>CANCEL</button>
             </div>
           </section>
         </div>

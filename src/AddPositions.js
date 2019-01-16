@@ -38,6 +38,9 @@ class AddPositions extends Component {
       [e.target.name]: e.target.value
     })
   }
+  cancelButton = () => {
+    window.location = '/positions'
+  }
 
   loadAllPositions = () => {
     axios.get('https://localhost:5001/api/positions').then(resp => {
@@ -101,6 +104,7 @@ class AddPositions extends Component {
                 onChange={this.handleChange}
               />
               <button onClick={this.addPositionToApi}>ADD</button>
+              <button onClick={this.cancelButton}>CANCEL</button>
             </div>
           </section>
 
