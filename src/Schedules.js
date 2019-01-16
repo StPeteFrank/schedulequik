@@ -129,7 +129,7 @@ class Schedules extends Component {
               </tbody>
             </table>
           </div>
-          <div>
+          {/* <div>
             {this.state.allShifts.map(shift => {
               return (
                 <ul>
@@ -139,7 +139,7 @@ class Schedules extends Component {
                 </ul>
               )
             })}
-          </div>
+          </div> */}
         </div>
       </div>
     )
