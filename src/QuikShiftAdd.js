@@ -81,6 +81,9 @@ class QuikShiftAdd extends Component {
       outTime: e.target.value
     })
   }
+  cancelButton = () => {
+    window.location = '/schedules'
+  }
 
   render() {
     return (
@@ -143,9 +146,7 @@ class QuikShiftAdd extends Component {
             </div>
             <div className="QuikShiftAddButtons">
               <button onClick={this.addShiftToApi}>ADD SHIFT</button>
-              <div className="LinkBackButtons">
-                <Link to="/schedules">CANCEL</Link>
-              </div>
+              <button onClick={this.cancelButton}>CANCEL</button>
               <button>DELETE SHIFT</button>
             </div>
           </section>

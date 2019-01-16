@@ -28,6 +28,7 @@ class AddPositions extends Component {
           positionName: ''
         })
       })
+    window.location = '/positions'
   }
 
   deletePositionFromApi = () => {
@@ -83,6 +84,7 @@ class AddPositions extends Component {
         }
       })
       .then(() => this.loadAllPositions())
+    window.location = '/positions'
   }
 
   render() {
