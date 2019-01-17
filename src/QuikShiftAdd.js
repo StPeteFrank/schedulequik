@@ -37,31 +37,25 @@ class QuikShiftAdd extends Component {
   }
 
   loadAllPositions = () => {
-    axios
-      .get('https://schedulequik-api.herokuapp.com/api/positions')
-      .then(resp => {
-        this.setState({
-          allPositions: resp.data
-        })
+    axios.get('https://localhost:5001/api/positions').then(resp => {
+      this.setState({
+        allPositions: resp.data
       })
+    })
   }
   loadAllEmployees = () => {
-    axios
-      .get('https://schedulequik-api.herokuapp.com/api/employees')
-      .then(resp => {
-        this.setState({
-          allEmployees: resp.data
-        })
+    axios.get('https://localhost:5001/api/employees').then(resp => {
+      this.setState({
+        allEmployees: resp.data
       })
+    })
   }
   loadAllShifts = () => {
-    axios
-      .get('https://schedulequik-api.herokuapp.com/api/shifts')
-      .then(resp => {
-        this.setState({
-          allShifts: resp.data
-        })
+    axios.get('https://localhost:5001/api/shifts').then(resp => {
+      this.setState({
+        allShifts: resp.data
       })
+    })
   }
   addShiftToApi = e => {
     e.preventDefault()
@@ -70,7 +64,7 @@ class QuikShiftAdd extends Component {
     if (this.state.existingShift) {
       axios
         .put(
-          `https://schedulequik-api.herokuapp.com/api/shifts/${
+          `https://localhost:5001/api/shifts/${
             this.props.location.state.shift.id
           }`,
           {
@@ -85,7 +79,7 @@ class QuikShiftAdd extends Component {
         })
     } else {
       axios
-        .post('https://schedulequik-api.herokuapp.com/api/shifts', {
+        .post('https://localhost:5001/api/shifts', {
           inTime: this.state.inTime,
           outTime: this.state.outTime,
           employeesTableId: this.state.employeesTableId,
@@ -120,7 +114,7 @@ class QuikShiftAdd extends Component {
   deleteCurrentShift = () => {
     axios
       .delete(
-        `https://schedulequik-api.herokuapp.com/api/shifts/${
+        `https://localhost:5001/api/shifts/${
           this.props.location.state.shift.id
         }`,
         {
@@ -134,7 +128,7 @@ class QuikShiftAdd extends Component {
   ///////////////////////////////////////////
 
   deleteCurrentEntireWeekShifts = () => {
-    axios.delete('https://schedulequik-api.herokuapp.com/api/shifts')
+    axios.delete('https://localhost:5001/api/shifts')
   }
 
   ////////////////////////////////////////////

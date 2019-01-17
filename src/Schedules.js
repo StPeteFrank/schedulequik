@@ -18,23 +18,19 @@ class Schedules extends Component {
   }
 
   loadAllEmployees = () => {
-    axios
-      .get('https://schedulequik-api.herokuapp.com/api/employees')
-      .then(resp => {
-        this.setState({
-          allEmployees: resp.data
-        })
+    axios.get('https://localhost:5001/api/employees').then(resp => {
+      this.setState({
+        allEmployees: resp.data
       })
+    })
   }
 
   loadAllShifts = () => {
-    axios
-      .get('https://schedulequik-api.herokuapp.com/api/shifts')
-      .then(resp => {
-        this.setState({
-          allShifts: resp.data
-        })
+    axios.get('https://localhost:5001/api/shifts').then(resp => {
+      this.setState({
+        allShifts: resp.data
       })
+    })
   }
   doesEmployeeHaveShift = (employeeId, date) => {
     let rv = (

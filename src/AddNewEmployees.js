@@ -19,20 +19,20 @@ class AddNewEmployees extends Component {
   addEmployeeToApi = e => {
     e.preventDefault()
     axios
-      .post('https://schedulequik-api.herokuapp.com/api/employees', {
+      .post('https://localhost:5001/api/employees', {
         firstName: this.state.firstName,
         lastName: this.state.lastName,
         phoneNumber: this.state.phoneNumber,
         emailAddress: this.state.emailAddress
       })
       .then(() => {
-        window.location = '/employees'
+        window.location.href = '/employees'
       })
   }
 
   deleteEmployeeFromApi = () => {
     axios
-      .delete('https://schedulequik-api.herokuapp.com/api/employees/firstname')
+      .delete('https://localhost:5001/api/employees/firstname')
       .then(() => this.loadAllEmployees())
   }
 
@@ -43,13 +43,11 @@ class AddNewEmployees extends Component {
   }
 
   loadAllEmployees = () => {
-    axios
-      .get('https://schedulequik-api.herokuapp.com/api/employees')
-      .then(resp => {
-        this.setState({
-          allEmployees: resp.data
-        })
+    axios.get('https://localhost:5001/api/employees').then(resp => {
+      this.setState({
+        allEmployees: resp.data
       })
+    })
   }
 
   _selectEmployeeForDeletion = event => {
@@ -76,7 +74,7 @@ class AddNewEmployees extends Component {
     // DELETE request to the API
     // Update state with latest employee list
     axios
-      .delete('https://schedulequik-api.herokuapp.com/api/employees/list', {
+      .delete('https://localhost:5001/api/employees/list', {
         headers: {
           contentType: 'application/json'
         },
