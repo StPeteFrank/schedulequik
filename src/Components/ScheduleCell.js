@@ -9,9 +9,11 @@ class ScheduleCell extends Component {
         className="ScheduleCells"
         to={{ pathname: '/quikshiftadd', state: { shift: this.props.shift } }}
       >
-        {/* <Link className="ScheduleCells" to="/quikshiftadd"> */}
         <li>
           {new Date(this.props.shift.inTime).toLocaleTimeString([], {
+            // month: 'short',
+            // day: '2-digit',
+            // year: '2-digit',
             hour: '2-digit',
             minute: '2-digit'
           })}

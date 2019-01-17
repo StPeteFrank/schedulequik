@@ -459,7 +459,7 @@ button {
 .ClearDeleteContainer button {
   border-radius: 4px;
   background-image: linear-gradient(rgb(94, 227, 250), rgb(37, 76, 150));
-  width: 20vw;
+  width: 25vw;
   height: 4vh;
   margin: 4vh;
 }

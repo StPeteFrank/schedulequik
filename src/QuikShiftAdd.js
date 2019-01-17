@@ -16,7 +16,6 @@ class QuikShiftAdd extends Component {
         positionsTableId: this.props.location.state.shift.positionsTableId,
         allEmployees: [],
         allPositions: [],
-        shiftIDSelectedForDelete: [],
         existingShift: this.props.location.state.shift
       }
     } else {
@@ -126,6 +125,10 @@ class QuikShiftAdd extends Component {
       .then(() => (window.location = '/schedules'))
   }
 
+  deleteCurrentEntireWeekShifts = () => {
+    axios.delete('https://localhost:5001/api/shifts')
+  }
+
   cancelButton = () => {
     window.location = '/schedules'
   }
@@ -207,7 +210,9 @@ class QuikShiftAdd extends Component {
             </section>
 
             <section className="ClearDeleteButtons">
-              <button>DELETE SCHEDULE</button>
+              <button onClick={this.deleteCurrentEntireWeekShifts}>
+                DELETE SCHEDULE
+              </button>
             </section>
           </div>
         </div>
