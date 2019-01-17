@@ -60,6 +60,7 @@ class QuikShiftAdd extends Component {
   addShiftToApi = e => {
     e.preventDefault()
     // IF shift already exists, THEN update ELSE create
+    // Previously (this.props.location.state.shift)
     if (this.state.existingShift) {
       axios
         .put(
@@ -124,11 +125,13 @@ class QuikShiftAdd extends Component {
       )
       .then(() => (window.location = '/schedules'))
   }
+  ///////////////////////////////////////////
 
   deleteCurrentEntireWeekShifts = () => {
     axios.delete('https://localhost:5001/api/shifts')
   }
 
+  ////////////////////////////////////////////
   cancelButton = () => {
     window.location = '/schedules'
   }
