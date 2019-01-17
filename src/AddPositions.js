@@ -19,7 +19,7 @@ class AddPositions extends Component {
   addPositionToApi = e => {
     e.preventDefault()
     axios
-      .post('https://localhost:5001/api/positions', {
+      .post('https://schedulequik-api.herokuapp.com/api/positions', {
         PositionName: this.state.positionName
       })
       .then(() => {
@@ -29,7 +29,7 @@ class AddPositions extends Component {
 
   deletePositionFromApi = () => {
     axios
-      .delete('https://localhost:5001/api/positions/id')
+      .delete('https://schedulequik-api.herokuapp.com/api/positions/id')
       .then(this.loadAllPositions())
   }
 
@@ -43,11 +43,13 @@ class AddPositions extends Component {
   }
 
   loadAllPositions = () => {
-    axios.get('https://localhost:5001/api/positions').then(resp => {
-      this.setState({
-        allPositions: resp.data
+    axios
+      .get('https://schedulequik-api.herokuapp.com/api/positions')
+      .then(resp => {
+        this.setState({
+          allPositions: resp.data
+        })
       })
-    })
   }
 
   _selectPositionForDeletion = event => {
@@ -74,7 +76,7 @@ class AddPositions extends Component {
     // DELETE request to the API
     // Update state with latest employee list
     axios
-      .delete('https://localhost:5001/api/positions/list', {
+      .delete('https://schedulequik-api.herokuapp.com/api/positions/list', {
         headers: {
           contentType: 'application/json'
         },

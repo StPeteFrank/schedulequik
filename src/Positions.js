@@ -15,11 +15,13 @@ class Positions extends Component {
   }
 
   loadAllPositions = () => {
-    axios.get('https://localhost:5001/api/positions').then(resp => {
-      this.setState({
-        allPositions: resp.data
+    axios
+      .get('https://schedulequik-api.herokuapp.com/api/positions')
+      .then(resp => {
+        this.setState({
+          allPositions: resp.data
+        })
       })
-    })
   }
 
   render() {

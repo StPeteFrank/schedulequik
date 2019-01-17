@@ -15,11 +15,13 @@ class Employees extends Component {
   }
 
   loadAllEmployees = () => {
-    axios.get('https://localhost:5001/api/employees').then(resp => {
-      this.setState({
-        allEmployees: resp.data
+    axios
+      .get('https://schedulequik-api.herokuapp.com/api/employees')
+      .then(resp => {
+        this.setState({
+          allEmployees: resp.data
+        })
       })
-    })
   }
 
   render() {
