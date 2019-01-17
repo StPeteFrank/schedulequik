@@ -57,25 +57,39 @@ class QuikShiftAdd extends Component {
   }
   addShiftToApi = e => {
     e.preventDefault()
-    // if(shift already exists, then update else create)
-
-    axios
-      .post('https://localhost:5001/api/shifts', {
-        inTime: this.state.inTime,
-        outTime: this.state.outTime,
-        employeesTableId: this.state.employeesTableId,
-        positionsTableId: this.state.positionsTableId
-      })
-      .then(() => {
-        this.loadAllShifts()
-        this.setState({
-          inTime: '',
-          outTime: '',
-          employeesTableId: 0,
-          positionsTableId: 0
+    // IF shift already exists, THEN update ELSE create
+    if (
+      this.props.location &&
+      this.props.location.state &&
+      this.props.location.state.shift.id
+    ) {
+      axios
+        .put(
+          `https://localhost:5001/api/shifts/${
+            this.props.location.state.shift.id
+          }`,
+          {
+            inTime: this.state.inTime,
+            outTime: this.state.outTime,
+            employeesTableId: this.state.employeesTableId,
+            positionsTableId: this.state.positionsTableId
+          }
+        )
+        .then(() => {
+          window.location = '/schedules'
         })
-      })
-    window.location = '/schedules'
+    } else {
+      axios
+        .post('https://localhost:5001/api/shifts', {
+          inTime: this.state.inTime,
+          outTime: this.state.outTime,
+          employeesTableId: this.state.employeesTableId,
+          positionsTableId: this.state.positionsTableId
+        })
+        .then(() => {
+          window.location = '/schedules'
+        })
+    }
   }
   handleDropDownChangePos = e => {
     this.setState({
