@@ -16,7 +16,8 @@ class QuikShiftAdd extends Component {
         positionsTableId: this.props.location.state.shift.positionsTableId,
         allEmployees: [],
         allPositions: [],
-        shiftIDSelectedForDelete: []
+        shiftIDSelectedForDelete: [],
+        existingShift: this.props.location.state.shift
       }
     } else {
       this.state = {
@@ -24,7 +25,8 @@ class QuikShiftAdd extends Component {
         allEmployees: [],
         allShifts: [],
         employeesTableId: 0,
-        positionsTableId: 0
+        positionsTableId: 0,
+        existingShift: null
       }
     }
   }
@@ -59,11 +61,7 @@ class QuikShiftAdd extends Component {
   addShiftToApi = e => {
     e.preventDefault()
     // IF shift already exists, THEN update ELSE create
-    if (
-      this.props.location &&
-      this.props.location.state &&
-      this.props.location.state.shift.id //
-    ) {
+    if (this.state.existingShift) {
       axios
         .put(
           `https://localhost:5001/api/shifts/${
@@ -194,7 +192,9 @@ class QuikShiftAdd extends Component {
             <div className="QuikShiftAddButtons">
               <button onClick={this.addShiftToApi}>ADD SHIFT</button>
               <button onClick={this.cancelButton}>CANCEL</button>
-              <button onClick={this.deleteCurrentShift}>DELETE SHIFT</button>
+              {this.state.existingShift && (
+                <button onClick={this.deleteCurrentShift}>DELETE SHIFT</button>
+              )}
             </div>
           </section>
         </div>
