@@ -15,7 +15,8 @@ class QuikShiftAdd extends Component {
         employeesTableId: this.props.location.state.shift.employeesTableId,
         positionsTableId: this.props.location.state.shift.positionsTableId,
         allEmployees: [],
-        allPositions: []
+        allPositions: [],
+        shiftIDSelectedForDelete: []
       }
     } else {
       this.state = {
@@ -61,7 +62,7 @@ class QuikShiftAdd extends Component {
     if (
       this.props.location &&
       this.props.location.state &&
-      this.props.location.state.shift.id
+      this.props.location.state.shift.id //
     ) {
       axios
         .put(
@@ -111,6 +112,22 @@ class QuikShiftAdd extends Component {
       outTime: e.target.value
     })
   }
+
+  deleteCurrentShift = () => {
+    axios
+      .delete(
+        `https://localhost:5001/api/shifts/${
+          this.props.location.state.shift.id
+        }`,
+        {
+          headers: {
+            contentType: 'application/json'
+          }
+        }
+      )
+      .then(() => (window.location = '/schedules'))
+  }
+
   cancelButton = () => {
     window.location = '/schedules'
   }
@@ -177,7 +194,7 @@ class QuikShiftAdd extends Component {
             <div className="QuikShiftAddButtons">
               <button onClick={this.addShiftToApi}>ADD SHIFT</button>
               <button onClick={this.cancelButton}>CANCEL</button>
-              <button>DELETE SHIFT</button>
+              <button onClick={this.deleteCurrentShift}>DELETE SHIFT</button>
             </div>
           </section>
         </div>

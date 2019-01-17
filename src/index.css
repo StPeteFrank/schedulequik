@@ -411,14 +411,8 @@ button {
   justify-content: left;
   flex-direction: column;
   margin-bottom: 1vh;
-  /* text-align: left; */
 }
-/* .QuikShiftAddDaysInput {
-  display: flex;
-  justify-content: left;
-  flex-direction: row;
-  margin-bottom: 1vh;
-} */
+
 .ApplyToDaysInput input {
   cursor: pointer;
 }
