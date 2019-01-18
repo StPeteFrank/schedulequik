@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import axios from 'axios'
+import config from './Config'
 
 class Employees extends Component {
   constructor(props) {
@@ -15,7 +16,7 @@ class Employees extends Component {
   }
 
   loadAllEmployees = () => {
-    axios.get('https://localhost:5001/api/employees').then(resp => {
+    axios.get(config.API_URL + '/employees').then(resp => {
       this.setState({
         allEmployees: resp.data
       })

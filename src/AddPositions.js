@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import config from './Config'
 
 class AddPositions extends Component {
   constructor(props) {
@@ -19,7 +20,7 @@ class AddPositions extends Component {
   addPositionToApi = e => {
     e.preventDefault()
     axios
-      .post('https://localhost:5001/api/positions', {
+      .post(config.API_URL + '/positions', {
         PositionName: this.state.positionName
       })
       .then(() => {
@@ -28,9 +29,7 @@ class AddPositions extends Component {
   }
 
   deletePositionFromApi = () => {
-    axios
-      .delete('https://localhost:5001/api/positions/id')
-      .then(this.loadAllPositions())
+    axios.delete(config.API_URL + '/positions/id').then(this.loadAllPositions())
   }
 
   handleChange = e => {
@@ -43,7 +42,7 @@ class AddPositions extends Component {
   }
 
   loadAllPositions = () => {
-    axios.get('https://localhost:5001/api/positions').then(resp => {
+    axios.get(config.API_URL + '/positions').then(resp => {
       this.setState({
         allPositions: resp.data
       })
@@ -74,7 +73,7 @@ class AddPositions extends Component {
     // DELETE request to the API
     // Update state with latest employee list
     axios
-      .delete('https://localhost:5001/api/positions/list', {
+      .delete(config.API_URL + '/positions/list', {
         headers: {
           contentType: 'application/json'
         },

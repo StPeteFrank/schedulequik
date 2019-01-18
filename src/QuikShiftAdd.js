@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import config from './Config'
 
 class QuikShiftAdd extends Component {
   constructor(props) {
@@ -37,21 +38,21 @@ class QuikShiftAdd extends Component {
   }
 
   loadAllPositions = () => {
-    axios.get('https://localhost:5001/api/positions').then(resp => {
+    axios.get(config.API_URL + '/positions').then(resp => {
       this.setState({
         allPositions: resp.data
       })
     })
   }
   loadAllEmployees = () => {
-    axios.get('https://localhost:5001/api/employees').then(resp => {
+    axios.get(config.API_URL + '/employees').then(resp => {
       this.setState({
         allEmployees: resp.data
       })
     })
   }
   loadAllShifts = () => {
-    axios.get('https://localhost:5001/api/shifts').then(resp => {
+    axios.get(config.API_URL + '/shifts').then(resp => {
       this.setState({
         allShifts: resp.data
       })
@@ -63,23 +64,18 @@ class QuikShiftAdd extends Component {
     // Previously (this.props.location.state.shift)
     if (this.state.existingShift) {
       axios
-        .put(
-          `https://localhost:5001/api/shifts/${
-            this.props.location.state.shift.id
-          }`,
-          {
-            inTime: this.state.inTime,
-            outTime: this.state.outTime,
-            employeesTableId: this.state.employeesTableId,
-            positionsTableId: this.state.positionsTableId
-          }
-        )
+        .put(`${config.API_URL}/shifts/${this.props.location.state.shift.id}`, {
+          inTime: this.state.inTime,
+          outTime: this.state.outTime,
+          employeesTableId: this.state.employeesTableId,
+          positionsTableId: this.state.positionsTableId
+        })
         .then(() => {
           window.location = '/schedules'
         })
     } else {
       axios
-        .post('https://localhost:5001/api/shifts', {
+        .post(config.API_URL + '/shifts', {
           inTime: this.state.inTime,
           outTime: this.state.outTime,
           employeesTableId: this.state.employeesTableId,
@@ -114,9 +110,7 @@ class QuikShiftAdd extends Component {
   deleteCurrentShift = () => {
     axios
       .delete(
-        `https://localhost:5001/api/shifts/${
-          this.props.location.state.shift.id
-        }`,
+        `${config.API_URL}/shifts/${this.props.location.state.shift.id}`,
         {
           headers: {
             contentType: 'application/json'
@@ -128,7 +122,7 @@ class QuikShiftAdd extends Component {
   ///////////////////////////////////////////
 
   deleteCurrentEntireWeekShifts = () => {
-    axios.delete('https://localhost:5001/api/shifts')
+    axios.delete(config.API_URL + '/shifts')
   }
 
   ////////////////////////////////////////////

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import config from './Config'
 
 class AddNewEmployees extends Component {
   constructor(props) {
@@ -19,7 +20,7 @@ class AddNewEmployees extends Component {
   addEmployeeToApi = e => {
     e.preventDefault()
     axios
-      .post('https://localhost:5001/api/employees', {
+      .post(config.API_URL + '/employees', {
         firstName: this.state.firstName,
         lastName: this.state.lastName,
         phoneNumber: this.state.phoneNumber,
@@ -32,7 +33,7 @@ class AddNewEmployees extends Component {
 
   deleteEmployeeFromApi = () => {
     axios
-      .delete('https://localhost:5001/api/employees/firstname')
+      .delete(config.API_URL + '/firstname')
       .then(() => this.loadAllEmployees())
   }
 
@@ -43,7 +44,7 @@ class AddNewEmployees extends Component {
   }
 
   loadAllEmployees = () => {
-    axios.get('https://localhost:5001/api/employees').then(resp => {
+    axios.get(config.API_URL + '/employees').then(resp => {
       this.setState({
         allEmployees: resp.data
       })
@@ -74,7 +75,7 @@ class AddNewEmployees extends Component {
     // DELETE request to the API
     // Update state with latest employee list
     axios
-      .delete('https://localhost:5001/api/employees/list', {
+      .delete(config.API_URL + '/employees/list', {
         headers: {
           contentType: 'application/json'
         },

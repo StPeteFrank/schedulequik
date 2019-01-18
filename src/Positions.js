@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import axios from 'axios'
+import config from './Config'
 
 class Positions extends Component {
   constructor(props) {
@@ -15,7 +16,7 @@ class Positions extends Component {
   }
 
   loadAllPositions = () => {
-    axios.get('https://localhost:5001/api/positions').then(resp => {
+    axios.get(config.API_URL + '/positions').then(resp => {
       this.setState({
         allPositions: resp.data
       })
