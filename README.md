@@ -1,7 +1,7 @@
-# React ScheduleQuik
+# ScheduleQuik
 
 <p align="center">
-<img src="img/ScheduleQuik App.gif">
+<img src="img/ScheduleQuikApp.gif">
 </p>
 
 <h5>Description.</h5>
