@@ -1,7 +1,7 @@
-# React Blackjack
+# React ScheduleQuik
 
 <p align="center">
-<img src="src/ScheduleQuik App.gif">
+<img src="img/ScheduleQuik App.gif">
 </p>
 
 <h5>Description.</h5>
