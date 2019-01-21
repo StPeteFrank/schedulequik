@@ -1,7 +1,7 @@
 # ScheduleQuik
 
 <p align="center">
-<img src="img/ScheduleQuikApp.gif">
+<img src="src/img/ScheduleQuik App.gif">
 </p>
 
 <h5>Description.</h5>
