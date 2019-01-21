@@ -122,7 +122,13 @@ class QuikShiftAdd extends Component {
   ///////////////////////////////////////////
 
   deleteCurrentEntireWeekShifts = () => {
-    axios.delete(config.API_URL + '/shifts')
+    axios
+      .delete(`${config.API_URL}/shifts`, {
+        headers: {
+          contentType: 'application/json'
+        }
+      })
+      .then(() => (window.location = '/schedules'))
   }
 
   ////////////////////////////////////////////
