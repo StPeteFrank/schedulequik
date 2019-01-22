@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import config from './Config'
+import { format } from 'date-fns'
 
 class QuikShiftAdd extends Component {
   constructor(props) {
@@ -18,6 +19,26 @@ class QuikShiftAdd extends Component {
         allEmployees: [],
         allPositions: [],
         existingShift: this.props.location.state.shift
+      }
+    } else if (
+      this.props.location &&
+      this.props.location.state &&
+      this.props.location.state.newShift
+    ) {
+      this.state = {
+        inTime: format(
+          new Date(this.props.location.state.newShift.date),
+          'YYYY-MM-DDT09:00'
+        ),
+        outTime: format(
+          new Date(this.props.location.state.newShift.date),
+          'YYYY-MM-DDT17:00'
+        ),
+        employeesTableId: this.props.location.state.newShift.employeeId,
+        positionsTableId: 0,
+        allEmployees: [],
+        allPositions: [],
+        existingShift: null
       }
     } else {
       this.state = {

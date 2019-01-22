@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import axios from 'axios'
+import { format } from 'date-fns'
 import ScheduleCell from './Components/ScheduleCell'
 import config from './Config'
 
@@ -35,7 +36,18 @@ class Schedules extends Component {
   }
   doesEmployeeHaveShift = (employeeId, date) => {
     let rv = (
-      <Link className="OffCells" to="/quikshiftadd">
+      <Link
+        className="OffCells"
+        to={{
+          pathname: '/quikshiftadd',
+          state: {
+            newShift: {
+              employeeId,
+              date
+            }
+          }
+        }}
+      >
         OFF
       </Link>
     )
