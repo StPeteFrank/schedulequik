@@ -358,6 +358,17 @@ button {
   flex-direction: column;
   margin: 6vh;
 }
+.QuikShiftAddButtons button {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 4px;
+  /* margin-top: 3vh;
+  margin-bottom: 3vh; */
+  background-image: linear-gradient(rgb(94, 227, 250), rgb(37, 76, 150));
+  padding: 2vh;
+  width: 20vw;
+}
 .LinkBackButtons {
   display: flex;
   justify-content: center;
@@ -474,7 +485,7 @@ button {
   margin-top: 3vh;
   margin-bottom: 3vh;
   background-image: linear-gradient(rgb(94, 227, 250), rgb(37, 76, 150));
-  padding: 3vh;
+  padding: 2vh;
   width: 20vw;
 }
 
