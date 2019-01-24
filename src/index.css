@@ -327,6 +327,7 @@ button {
   flex-direction: column;
   margin-bottom: 3vh;
 }
+/////////
 .DeleteEmployee button {
   display: flex;
   justify-content: center;
@@ -465,6 +466,25 @@ button {
   height: 4vh;
   margin: 4vh;
 }
+.ClearDeleteButtons {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.ClearDeleteButtons button {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 4px;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  background-image: linear-gradient(rgb(94, 227, 250), rgb(37, 76, 150));
+  padding: 1vh;
+  width: 20vw;
+}
+
 .DeleteCheckbox {
   cursor: pointer;
 }
