@@ -24,7 +24,7 @@ code {
   background-image: url(Images/rawpixel-714362-unsplash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: calc(100vh - 20vh);
+  min-height: calc(100vh - 15vh);
   /* max-width: 100%;
   height: auto; */
 }
@@ -97,6 +97,7 @@ h3 {
   color: whitesmoke;
   text-decoration: none;
   cursor: pointer;
+  font-weight: bold;
 }
 .AddEditTabs {
   background-color: #2d4b9b;
@@ -148,6 +149,7 @@ th {
   color: whitesmoke;
   text-decoration: none;
   cursor: pointer;
+  font-weight: bold;
 }
 .ScheduleTable {
   width: 100%;

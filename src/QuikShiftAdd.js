@@ -7,6 +7,7 @@ class QuikShiftAdd extends Component {
   constructor(props) {
     super(props)
     if (
+      //If the shift cell is populated
       this.props.location &&
       this.props.location.state &&
       this.props.location.state.shift
@@ -20,6 +21,7 @@ class QuikShiftAdd extends Component {
         allPositions: [],
         existingShift: this.props.location.state.shift
       }
+      //If the cell is an OFF cell, still have the name and date displayed
     } else if (
       this.props.location &&
       this.props.location.state &&
@@ -40,6 +42,7 @@ class QuikShiftAdd extends Component {
         allPositions: [],
         existingShift: null
       }
+      //Otherwise just allow to change the state in this default way
     } else {
       this.state = {
         allPositions: [],
@@ -82,7 +85,6 @@ class QuikShiftAdd extends Component {
   addShiftToApi = e => {
     e.preventDefault()
     // IF shift already exists, THEN update ELSE create
-    // Previously (this.props.location.state.shift)
     if (this.state.existingShift) {
       axios
         .put(`${config.API_URL}/shifts/${this.props.location.state.shift.id}`, {
@@ -140,7 +142,6 @@ class QuikShiftAdd extends Component {
       )
       .then(() => (window.location = '/schedules'))
   }
-  ///////////////////////////////////////////
 
   deleteCurrentEntireWeekShifts = () => {
     axios
@@ -151,8 +152,6 @@ class QuikShiftAdd extends Component {
       })
       .then(() => (window.location = '/schedules'))
   }
-
-  ////////////////////////////////////////////
   cancelButton = () => {
     window.location = '/schedules'
   }
@@ -246,30 +245,3 @@ class QuikShiftAdd extends Component {
 }
 
 export default QuikShiftAdd
-
-{
-  /* <div className="ApplyToDaysInput">
-              <p>Apply to Days</p>
-              <div className="QuikShiftAddDaysInput">
-                <input type="checkbox" /> <label>Monday</label>
-              </div>
-              <div className="ListedPositions">
-                <input type="checkbox" /> <label>Tuesday</label>
-              </div>
-              <div className="ListedPositions">
-                <input type="checkbox" /> <label>Wednesday</label>
-              </div>
-              <div className="ListedPositions">
-                <input type="checkbox" /> <label>Thursday</label>
-              </div>
-              <div className="ListedPositions">
-                <input type="checkbox" /> <label>Friday</label>
-              </div>
-              <div className="ListedPositions">
-                <input type="checkbox" /> <label>Saturday</label>
-              </div>
-              <div className="ListedPositions">
-                <input type="checkbox" /> <label>Sunday</label>
-              </div>
-            </div> */
-}
