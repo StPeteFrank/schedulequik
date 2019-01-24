@@ -6,7 +6,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: rgb(214, 208, 208); */
 }
 
 code {
@@ -15,8 +14,6 @@ code {
 }
 .Header {
   background-color: #2d4b9b;
-  /* background-color: rgb(88, 219, 186); */
-  /* From the Auth lecture color side */
   padding: 2vh;
   color: whitesmoke;
 }
@@ -25,8 +22,6 @@ code {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: calc(100vh - 15vh);
-  /* max-width: 100%;
-  height: auto; */
 }
 
 .Tabs {
@@ -107,7 +102,6 @@ h3 {
   align-items: center;
   padding: 1vh;
   margin-top: 4vh;
-  /* font-weight: bold; */
 }
 
 .EmployeeContainer {
@@ -327,7 +321,6 @@ button {
   flex-direction: column;
   margin-bottom: 3vh;
 }
-/////////
 .DeleteEmployee button {
   display: flex;
   justify-content: center;
@@ -481,7 +474,7 @@ button {
   margin-top: 3vh;
   margin-bottom: 3vh;
   background-image: linear-gradient(rgb(94, 227, 250), rgb(37, 76, 150));
-  padding: 1vh;
+  padding: 3vh;
   width: 20vw;
 }
 
