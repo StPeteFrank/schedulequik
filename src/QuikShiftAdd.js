@@ -7,7 +7,7 @@ class QuikShiftAdd extends Component {
   constructor(props) {
     super(props)
     if (
-      //If the shift cell is populated
+      //If the shift cell is populated with shift
       this.props.location &&
       this.props.location.state &&
       this.props.location.state.shift
