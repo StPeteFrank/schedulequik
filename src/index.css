@@ -20,7 +20,7 @@ code {
 }
 .Footer {
   padding: 1vh;
-  background-image: linear-gradient(rgb(94, 227, 250), rgb(37, 76, 150));
+  background-image: linear-gradient(rgb(37, 76, 150), rgb(94, 227, 250));
   color: whitesmoke;
   display: flex;
   justify-content: left;
