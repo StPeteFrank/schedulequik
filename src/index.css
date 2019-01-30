@@ -21,8 +21,12 @@ code {
 .Footer {
   padding: 1vh;
   background-image: linear-gradient(rgb(94, 227, 250), rgb(37, 76, 150));
-  text-align: left;
+  color: whitesmoke;
+  display: flex;
+  justify-content: left;
+  align-items: left;
 }
+/* Working footer CSS */
 .Home {
   background-image: url(Images/rawpixel-714362-unsplash.jpg);
   background-size: cover;
@@ -81,6 +85,7 @@ h3 {
 .EmployeeContainer {
   margin-left: 1vw;
   margin-right: 1vw;
+  margin-bottom: 20vh;
 }
 .EmployeeTable {
   background-color: rgb(236, 233, 233);
