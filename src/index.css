@@ -19,8 +19,9 @@ code {
   color: whitesmoke;
 }
 .Footer {
-  padding: 2vh;
+  padding: 1vh;
   background-image: linear-gradient(rgb(94, 227, 250), rgb(37, 76, 150));
+  text-align: left;
 }
 .Home {
   background-image: url(Images/rawpixel-714362-unsplash.jpg);
