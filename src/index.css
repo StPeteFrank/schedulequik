@@ -18,6 +18,10 @@ code {
   padding: 2vh;
   color: whitesmoke;
 }
+.Footer {
+  padding: 2vh;
+  background-image: linear-gradient(rgb(94, 227, 250), rgb(37, 76, 150));
+}
 .Home {
   background-image: url(Images/rawpixel-714362-unsplash.jpg);
   background-size: cover;

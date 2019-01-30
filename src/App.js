@@ -32,6 +32,7 @@ class App extends Component {
           <Route path="/addpositions" component={AddPositions} />
           <Route path="/addnewemployees" component={AddNewEmployees} />
           <Route path="/quikshiftadd" component={QuikShiftAdd} />
+          <div className="Footer" />
         </div>
       </Router>
     )
