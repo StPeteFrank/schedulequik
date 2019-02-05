@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import axios from 'axios'
 import config from './Config'
+import Footer from './Footer'
 
 class Employees extends Component {
   constructor(props) {
@@ -57,6 +58,7 @@ class Employees extends Component {
             </table>
           </div>
         </div>
+        <Footer tagline="This is a footer" />
       </div>
     )
   }

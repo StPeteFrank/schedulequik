@@ -8,6 +8,7 @@ import AddNewEmployees from './AddNewEmployees'
 import QuikShiftAdd from './QuikShiftAdd'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import Positions from './Positions'
+import Footer from './Footer'
 
 class App extends Component {
   render() {
@@ -32,9 +33,7 @@ class App extends Component {
           <Route path="/addpositions" component={AddPositions} />
           <Route path="/addnewemployees" component={AddNewEmployees} />
           <Route path="/quikshiftadd" component={QuikShiftAdd} />
-          <div className="Footer">
-            <h7>This a footer</h7>
-          </div>
+          <Footer tagline="This is a footer" />
         </div>
       </Router>
     )
