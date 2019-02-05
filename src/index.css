@@ -13,8 +13,8 @@ code {
     monospace;
 }
 .Header {
-  /* background-color: #2d4b9b; */
-  background-color: rgb(143, 6, 6);
+  background-color: #2d4b9b;
+  /* background-color: rgb(143, 6, 6); */
   padding: 2vh;
   color: whitesmoke;
 }
