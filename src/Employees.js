@@ -58,7 +58,6 @@ class Employees extends Component {
             </table>
           </div>
         </div>
-        <Footer tagline="This is a footer" />
       </div>
     )
   }
