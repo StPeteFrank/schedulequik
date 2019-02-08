@@ -5,7 +5,7 @@ class Footer extends Component {
     return (
       <div className="Footer">
         <h9>ScheduleQuik</h9>
-        <h9> &copy;2019 StPeteFrank</h9>
+        <h9> &copy;2019 github.com/StPeteFrank</h9>
       </div>
     )
   }
