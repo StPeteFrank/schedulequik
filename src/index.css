@@ -28,6 +28,10 @@ code {
   justify-content: space-between;
 }
 /* Working footer CSS */
+.Links {
+  text-decoration: none;
+  color: whitesmoke;
+}
 .Home {
   background-image: url(Images/rawpixel-714362-unsplash.jpg);
   background-size: cover;
