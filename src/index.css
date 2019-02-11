@@ -26,9 +26,14 @@ code {
   justify-content: center;
   align-items: left;
   justify-content: space-between;
+  text-decoration: none;
 }
 /* Working footer CSS */
 .Links {
+  text-decoration: none;
+  color: whitesmoke;
+}
+.ScheduleQuikButton a {
   text-decoration: none;
   color: whitesmoke;
 }

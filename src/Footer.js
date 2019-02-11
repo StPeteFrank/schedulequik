@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 class Footer extends Component {
   render() {
     return (
       <div className="Footer">
-        <h9>ScheduleQuik</h9>
+        <div className="ScheduleQuikButton">
+          <Link to="/home">ScheduleQuik</Link>
+        </div>
         <a
           className="Links"
           href="https://www.github.com/StPeteFrank"
@@ -16,7 +19,5 @@ class Footer extends Component {
     )
   }
 }
-{
-  /* <h9> &copy;2019 github.com/StPeteFrank</h9> */
-}
+
 export default Footer
