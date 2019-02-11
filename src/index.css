@@ -554,3 +554,8 @@ h2 {
   font-size: 1.75vh;
   font-size: 1.75vw;
 }
+.OffCells:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(94, 227, 250);
+}
