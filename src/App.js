@@ -16,7 +16,9 @@ class App extends Component {
       <Router>
         <div className="App">
           <div className="Header">
-            <h1>ScheduleQuik</h1>
+            <h1>
+              <Link to="/home">ScheduleQuik</Link>
+            </h1>
           </div>
           <div className="Tabs">
             <Link to="/home">HOME</Link>

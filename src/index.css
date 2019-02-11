@@ -17,6 +17,11 @@ code {
   /* background-color: rgb(143, 6, 6); */
   padding: 2vh;
   color: whitesmoke;
+  text-decoration: none;
+}
+.Header a {
+  color: whitesmoke;
+  text-decoration: none;
 }
 .Footer {
   padding: 1vh;
